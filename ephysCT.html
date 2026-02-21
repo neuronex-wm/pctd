@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Primate Cell Type Database</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Bootstrap CSS - ADD THIS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link href="css/test2.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    
+    <!-- NAV BAR AND HEADING -->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Primate Cell Type Database</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto">
+				<a class="nav-link" href="index.html">Home </a>
+				<li class="nav-item">
+					<a class="nav-link" href="ourTeam.html">Our Team</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Data
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Electrophysiology</a>
+						
+						
+						
+					</div>
+				</li>
+			</ul>
+			<form class="d-flex my-2 my-lg-0 ms-auto" action="search.html">
+				<input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search"
+					aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+
+
+	<!-- TITLE -->
+
+	<section>
+		<h2 Class="text-center" id="electrophystitle">Ex Vivo Data - Intracellular Electrophysiology&nbsp;</h2>
+		
+	</section>
+
+
+	<!-- AXN BUTTONS -->
+	<div style="position: sticky; top: 0%; right: 0%; z-index: 9999;"> <div class="toast" data-autohide="true" data-delay="10000" style="position: absolute; top: 0%; right: 0%; z-index: 9999;">
+		  
+ 				 	<div class="toast-header bg-danger">
+   			 				<strong class="me-auto text-white">Access Restricted</strong>
+    						<small class="text-muted"></small>
+    						<button type="button" class="ms-2 mb-1 btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+  					</div>
+				  				<div class="toast-body bg-light"> Download is currently restricted. To download the dataset please contact us.</div>
+		</div> </div>
+	<p>
+		<span id="Filter" class="text-left" style="display: relative">
+			<button id="filter_btn" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#ScatterFilter" role="button"
+				aria-expanded="false" aria-controls="ScatterFilter">Filter</button>
+			<button id="filter_btn2" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#Scatter2Filter" role="button"
+				aria-expanded="false" aria-controls="Scatter2Filter">Filter - Scatter</button>
+
+			<!-- <button id="filter_btn4" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#Scatter4Filter" role="button"
+				aria-expanded="false" aria-controls="Scatter4Filter">Filter - UMAP</button> -->
+			<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tableData"
+				aria-expanded="true" aria-controls="tableData">Table</button>
+		</span>
+		<span id="dwnld_btn" class="text-right " style="display: relative">
+
+			<button id="dlsel" class="btn btn-primary">Download Selected (zip)</button>
+			<a id="dlall" href="#" class="btn btn-primary" alight="right">Download Full dataset
+				(NWB + abf)</a>
+		</span>
+
+	</p>
+
+	<br>
+
+
+	<!-- MAIN TABLE -->
+	<div class="collapse multi-collapse" id="Scatter2Filter">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-12 graph-responsive-wrapper">
+					<div class="card card-body">
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="scatterXAxis" class="form-label">X-Axis Feature:</label>
+								<select id="scatterXAxis" class="form-select">
+									<option value="AP halfwidth" selected>AP Halfwidth (ms)</option>
+									<option value="AP amplitude">AP Amplitude (mV)</option>
+									<option value="Rheobase">Rheobase (pA)</option>
+									<option value="Resistance">Resistance (MΩ)</option>
+									<option value="Time Constant">Time Constant (ms)</option>
+									<option value="Resting potential">Resting Potential (mV)</option>
+									<option value="Maximum firing rate">Maximum Firing Rate (Hz)</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="scatterYAxis" class="form-label">Y-Axis Feature:</label>
+								<select id="scatterYAxis" class="form-select">
+									<option value="AP halfwidth">AP Halfwidth (ms)</option>
+									<option value="AP amplitude" selected>AP Amplitude (mV)</option>
+									<option value="Rheobase">Rheobase (pA)</option>
+									<option value="Resistance">Resistance (MΩ)</option>
+									<option value="Time Constant">Time Constant (ms)</option>
+									<option value="Resting potential">Resting Potential (mV)</option>
+									<option value="Maximum firing rate">Maximum Firing Rate (Hz)</option>
+								</select>
+							</div>
+						</div>
+						<div id="graphDiv_scatter2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="multi-collapse" id="ScatterFilter">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-12 graph-responsive-wrapper">
+					<div class="card card-body">
+						<div id="graphDiv"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- PARACOORDS -->
+		<script>
+			
+		</script>
+	</div>
+
+	<div class="collapse multi-collapse" id="Scatter4Filter">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-12 graph-responsive-wrapper">
+					<div class="card card-body">
+						<!-- Umap -->
+						<div class="row align-items-center">
+							<div class="col-12 col-md-6">
+								<div id="graphDiv_scatter4"></div>
+							</div>
+						</div>
+						<!-- Umap end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section>
+		<div class="container-fluid" style="background: var(--bs-body-bg);">
+		<div class="row justify-content-center">
+		<div class="col-12 table-responsive-wrapper">
+		<div class="collapse multi-collapse show" id="tableData">
+			
+				<table id="table" data-toggle="table"  data-sortable="true"
+					data-pagination="true" data-search="true" data-detail-view="true" data-force-export="true"
+					data-show-columns="true" data-click-to-select="true" data-detail-formatter="detailFormatter"
+					data-show-export="false" data-classes="table table-card-like table-borderless table-striped"
+					data-sort-name="Resting potential" data-sort-order="asec" data-page-list="[10, 25, 50, 100, all]">
+					<thead>
+						<tr>
+							<th data-field="state" data-checkbox="true" rowspan="2"></th>
+							<th data-field="cellID" data-sortable="true" data-formatter="nameFormatter" rowspan="2" data-filter-control="select">Cell
+								ID</th>
+							<th data-field="preview" data-formatter="imageFormatter" rowspan="2" data-valign="middle">
+							</th>
+							<th colspan="9"></th>
+							<th data-field="link" data-formatter="linkFormatter" rowspan="2" data-halign="center" data-filter-control="select">Link
+							</th>
+							<!-- <th data-field="Morphology" data-sortable="true" data-formatter="morphFormatter" rowspan="2"
+								data-valign="right">Morphology</th> -->
+							<!--<th data-field="internalID" data-sortable="false" data-formatter="reportFormatter"
+								rowspan="2" data-valign="right"></th>-->
+						</tr>
+						<tr>
+							<th data-field="Species" data-formatter="nameFormatter" data-sortable="true" data-filter-control="select">Species
+							</th>
+							<th data-field="Cortical area" data-formatter="nameFormatter" data-sortable="true" data-filter-control="select">Cortical area
+							</th>
+							<th data-field="AP halfwidth" data-formatter="nameFormatter" data-sortable="true">Half Width
+							</th>
+							<th data-field="AP amplitude" data-formatter="nameFormatter" data-sortable="true">Amplitude
+							</th>
+							<th data-field="Rheobase" data-formatter="nameFormatter" data-sortable="true" class="data-hide-shrink">Rheobase</th>
+							<th data-field="Resistance" data-formatter="nameFormatter" data-sortable="true" class="data-hide-shrink">Resistance
+							</th>
+							<th data-field="Time Constant" data-formatter="nameFormatter" data-sortable="true" class="data-hide-shrink">Time
+								Constant</th>
+							<th data-field="Resting potential" data-formatter="nameFormatter" data-sortable="true" class="data-hide-shrink">RMP
+							</th>
+							<th data-field="Maximum firing rate" data-formatter="nameFormatter" data-sortable="true" class="data-hide-shrink">Max
+								firing rate</th>
+						</tr>
+					</thead>
+				</table>
+			
+		</div>
+		</div>
+		</div>
+		</div>
+
+	</section>
+	<hr>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 col-12 col-lg-7">
+					<h3 class="text-center">GET IN TOUCH</h3>
+					<address class="text-center">
+						<strong>Western University - Robarts Research Institute</strong><br>
+						1151 Richmond St. N.,
+						London, Ontario, Canada<br>
+						P: (519) 931-5777 F: (519) 931-5789<br>
+					</address>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<hr>
+	<footer class="text-center">
+		<div class="container">
+			<div class="row" style="justify-content: center;">
+				<center>
+					<a>Copyright © JMT Lab 2020. All rights reserved.</a>
+				</center>
+			</div>
+			<br>
+
+		</div>
+	</footer>
+	<footer class="text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<a href="/citation.html" class="btn btn-outline-primary"> Please view Our Citation policy.</a>
+				</div>
+				<div class="col-6">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
+							alt="Creative Commons License" style="border-width:0; width: 50px;"
+							src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />
+					<div class="font-weight-lighter" style="font-size:10px">This work is licensed under a <a
+							rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+							Attribution-NonCommercial 4.0 International License</a>
+
+					</div>
+				</div>
+			</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<script
+	src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
+	integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM="
+	crossorigin="anonymous"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   
+	<script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+	<!-- Bootstrap Table JS -->
+	<script src="https://unpkg.com/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.22.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.22.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154856577-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-154856577-1');
+	</script>
+	<!-- JS ZIP LIBRARIES AND CUSTOM JS -->
+	<script src="js/jszip.min.js"></script>
+	<script src="js/jszip-utils.min.js"></script>
+	<script src="js/ephys.js"></script>
+</body>
+
+</html>

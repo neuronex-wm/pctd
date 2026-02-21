@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154856577-1"></script>
+	<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154856577-1');
+</script>
+    <title>Primate Cell Type Database</title>
+    <!-- Bootstrap -->
+     <!-- Bootstrap CSS - ADD THIS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/test2.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Primate Cell Type Database</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+			<li class="nav-item">
+				<a class="nav-link" href="ourTeam.html">Our Team</a>
+			 </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Data
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="ephysCT.html">Electrophysiology</a>
+              
+              
+              
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0 ms-auto" action="search.html">
+          <input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <section>
+      <div class="jumbotron text-center mt-2">
+
+        <div class="container">
+		<div class="row">
+        <div class="col-12" id="pridatabase">
+              <h1>The Primate Database Team</h1>
+          <p>We are a conglomerate of two laboratories at the Robarts Reasearch Institute, Western University, Canada. We brought the technical strengths of both of our groups to allow for the creation of this database. <br><br>Below are listed the PIs, and members categorized by roles.</p>
+             
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 id="PIs">Principle Investigators</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+	  
+	  <!-- Julio Section -->
+    <section class = "bio" id="julio_bio">
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-4 col-12">
+			<img class = "bioPic" id="julio_pic" src="images/julio_newpic2.jpg" alt="Julio Martinez-Trujillo"  >
+          </div>
+          <div class="col-md-4 col-12 col-lg-8">
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <img class="me-3" src="images/new_macaque-01.png" alt="macaque"  style="width:50px;height:50px;">
+                <div class="flex-grow-1">
+                  <h5 class="mt-0 mb-1">Dr. Julio C. Martinez-Trujillo, MD, PhD</h5>
+                  Understanding the neurophysiological basis of cognition is one of the greatest challenges faced by neuroscientists. In the last decades we have made considerable progress searching for neural correlates of cognitive functions in the primate brain, however what we currently know is just the tip of the iceberg.
+				  <br>
+				  The laboratory uses a combination of techniques such as behavioral measurements, extra-cellular single cell recordings and brain mapping in order to explore the physiology of cognition, more specifically, the physiology of attention, visuomotor transformations and motion perception. Ultimately, the results of our research will be applied to the study of diseases that affect human health.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	 <!-- Wataru Section -->
+    <section class = "bio" id="wataru_bio">
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-4 col-12">
+			<img class = "bioPic" id="wataru_pic" src="images/wataru_pic2.jpg" alt="Wataru Inoue"  >
+          </div>
+          <div class="col-md-4 col-12 col-lg-8">
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <img class="me-3" src="images/morph.png" alt="morpho"  style="width:50px;height:50px;">
+                <div class="flex-grow-1">
+                  <h5 class="mt-0 mb-1">Dr. Wataru Inoue, PhD</h5>
+                  My current research aims to understand the mechanisms of stress-induced neural plasticity. To study this, we use patch clamp electrophysiology in brain slices prepared from laboratory animals subjected to various stress paradigms. We also combine optogenetics with ex vivo electrophysiology as well as in vivo stress paradigms in order to examine the roles of genetically and anatomically defined neural circuits in stress-associative synaptic plasticity and learning.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+	 
+	  	 <!-- Shreejoy Section -->
+    <section id="shreejoy_bio">
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-4 col-12">
+			<img class = "bioPic" id="shreejoy_pic" src="images/shreejoy_pic2.png" alt="Shreejoy Tripathy"  >
+          </div>
+          <div class="col-md-4 col-12 col-lg-8">
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <img class="me-3" src="images/eppendorf.png" alt="molecular"  style="width:50px;height:50px;">
+                <div class="flex-grow-1">
+                  <h5 class="mt-0 mb-1">Dr. Shreejoy Tripathy, PhD</h5>
+                  We aim to develop a multi-scale understanding of brain cell type diversity, bridging genetics and gene expression with cell and circuit physiology. We develop machine learning and statistical methods to help neuroscientists translate information at different levels of organization, like gene expression to neuron electrophysiology. Our long-term goal is to better understand the cellular changes that underlie psychiatric and neurological disorders and to ultimately develop approaches that can help guide tailored treatments for mental health patients. 
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+	  <br>
+   <!--Accordion for lab members-->
+<section>
+    <div id="accordion">
+        <div class="card">
+        <a class="card-link card-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
+          Surgeries
+        </a>
+ 
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                    <div class="card-body">
+                <!--New Lab Member-->
+            <div class="container mt-2">
+                <div class="row">
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Rogelio Luna, MD, PhD</h5><em>Postdoctoral Associate</em><br> I am looking at the encoding of spatial working memory signals in the prefrontal cortex.
+							My current goal is finding what is the spatial reference frame that prefrontal circuits might be basing on to represent/codify this spatial WM signal.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Benjamin W Corrigan, MSc</h5><em>PhD Student</em><br> I study the effects of eye movements on neural activity in the hippocampus and the prefrontal cortex
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Megan Roussy</h5> <em>PhD Student</em><br> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>                 
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Borna Mahmoudian</h5> <em>PhD Student</em> <br>My research concerns the role of the amygdala in primate social cognition. We are interested in learning about how gaze cues of conspecific is processed in primate amygdala.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                   <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Diego Buitrago-Piza, MD</h5> <em>PhD Student</em><br>Representation of 3D space in the hippocampus of freely behaving marmosets.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					<!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">William JM Assis</h5> <em>PhD Student</em><br>Studying the role of the Hippocampus in recognition memory in new-world primates.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					 <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Kim Thomaes, RVT</h5> <em>Registered Veterinary Technician</em><br>
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                   <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Rhonda Kersten, RVT</h5> 
+                            <em>Registered Veterinary Technician</em><br>
+                            
+                          </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					<!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Kristy Gibbs, RVT</h5> <em>Registered Veterinary Technician</em><br>
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					        </div>
+
+				<!-- Patch Clampers -->	
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <div class="card">
+        <a class="card-link card-header" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
+          Patch Clamp
+        </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                    <div class="card-body">
+                <!--New Lab Member-->
+            <div class="container mt-2">
+                <div class="row">
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Michael Feyerabend, PhD</h5> <em>Postdoctoral Associate</em><br> My main interests are neocortical physiology and neuronal diversity as well as physiology of the neocortex with particular focus on GABAergic interneurons.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Julia Sunstrum, MSc </h5><em>PhD Student</em><br> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                   <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Sam Mestern, MSc</h5> <em>PhD Student</em><br>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					<!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Michelle S. Jimenez-Sosa, MD</h5> <em>MSc Student</em><br>  I am interested in the neuronal basis of cognitive processes in health and disease; my research focuses on fast spiking interneurons in the PFC.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Sara Matovic, MSc</h5> Former lab member of the Innoue group.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>                 
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Meagan Wiederman, MSc</h5> Former lab member of the Innoue group.
+                            </div>
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					
+					
+                    </div>
+                    </div>
+                </div>
+				</div>
+
+            </div>
+        <div class="card">
+        <a class="card-link card-header" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+          Morphology
+        </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                    <!--New Lab Member-->
+            <div class="container mt-2">
+				<br>
+                <div class="row">
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Michael Feyerabend, PhD</h5> <em>Postdoctoral Associate</em><br> My main interests are neocortical physiology and neuronal diversity as well as physiology of the neocortex with particular focus on GABAergic interneurons.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>				
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Michelle S. Jimenez-Sosa, MD</h5> <em>MSc Student</em><br>I am interested in the neuronal basis of cognitive processes in health and disease; my research focuses on fast spiking interneurons in the PFC.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Nika Khajehdehi</h5> <em>MSc Student</em><br> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Michelle Everest, BSc</h5> <br> Former research technician of the Poulter lab
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>                 				
+					
+                    </div>
+                    </div>
+					</div>
+
+                </div>
+        <div class="card">
+        <a class="card-link card-header" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" >
+          Database Developers
+        </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
+                    <div class="card-body">
+                    <!--New Lab Row-->
+            <div class="container mt-2">
+                <div class="row">
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Michael Feyerabend, PhD</h5><em>Postdoctoral Associate</em><br> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Eric S Kuebler, PhD</h5><em>Postdoctoral Associate</em><br> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>      
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Sam A Mestern, MSc</h5><em>PhD Student</em><br> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+					<!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">William JM Assis</h5><em>PhD Student</em><br>Studying the role of the Hippocampus in recognition memory in new-world primates.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>
+                    <!-- New Lab Member in the Row-->
+                    <div class="col-md-4 col-12">
+                        <ul class="list-unstyled">
+                        <li class="d-flex">
+                            <img class="me-3" src="images/waveform.png" alt="waveform" style="width:50px;height:50px;">
+                            <div class="flex-grow-1">
+                            <h5 class="mt-0 mb-1">Kartik S Pradeepan</h5><em>MSc Student</em><br> Studying early network development of Autism patient iPSC-derived glutamatergic networks on multielectrode arrays.
+                            </div>
+                        </li>
+                        </ul>                      
+                    </div>           
+                   
+                    </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+		
+	</div>
+ 
+</section>
+ <section class="bio">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h3>In memoriam&nbsp;</h3>
+			<div class="font-weight-lighter">Memoriam courtesy of <a href="https://www.schulich.uwo.ca/about/news/2019/august/in_memoriam_michael_poulter_phd.html">Schulich School of Medicine</a></div>
+			</div> </div>
+		  <br>
+		  
+		  <div class="row">
+			<section class = "bio" id="poult_bio">
+     		 <div class="container mt-2">
+        		<div class="row">
+          <div class="col-md-4 col-12">
+			<img class = "bioPic" id="poulter_pic" src="images/poulter_newpic.png" alt="Michael Poulter"  >
+          </div>
+          <div class="col-md-4 col-12 col-lg-8">
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                
+                <div class="flex-grow-1">
+                  <h5 class="mt-0 mb-1">Dr. Michael Poulter, PhD</h5>
+                  <div class="text-left text-black-50" style="font-size: 75%;"> 
+            It is with great sadness that we share news of the unexpected passing of Michael Poulter, PhD, professor in Physiology and Pharmacology and scientist at Robarts Research Institute.
+Poulter was a devoted scientist and teacher whose contributions to the School and the research community will be greatly missed. <br>
+Recruited to Robarts Research Institute in 2005 as a member of the Neurodegeneration Group, Poulter subsequently joined the Department of Physiology and Pharmacology. His research was internationally recognized for contributing to the understanding of the molecular and cellular basis of epilepsy and depressive disorders. He was developing a new anti-epileptic drug through a start-up company he founded, and was committed to the advancement of science for the betterment of human health.<br>
+He served as a member of the Robarts Executive Committee and was an active member of his research group and Robarts Research Institute. Throughout his career, he published more than 70 peer-reviewed manuscripts and was successful in obtaining research funding from CIHR, NSERC, The Ontario Brain Institute, and other agencies.
+Poulter was also a dedicated teacher and mentor and made many valuable contributions to undergraduate and graduate training at Schulich Medicine & Dentistry. He served as the Director of the Neuroscience Graduate Program from 2011 to 2014.<br>
+Dr. Poulter is survived by his wife Caroline Schild-Poulter and two children.
+		    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+		   
+			  
+			 
+          </div>
+        </div>
+      
+    </section>	 
+	  <hr>
+<!-- Bottom Info Stuff -->
+    <section id="team_recr">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>We are recruiting&nbsp;</h1>
+            <p>The lab is always interested in hearing from passionate, dedicated, and inspired students or postdocs who would like to come work with us.</p>
+			  <!-- email button -->
+              <a href="mailto:primate.database@gmail.com?cc=julio.martinez@robarts.ca, winoue@uwo.ca&Subject=Primate%20Cell%20Type%20Database" target="_top">
+				<button type="button" class="btn btn-success">Get in touch</button>
+			  </a>
+          </div>
+        </div>
+      </div>
+    </section>
+	  
+	  
+		  
+    <hr>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          
+		
+          <div class="col-md-4 col-12 col-lg-7">
+            <h3 class="text-center">Contact Us</h3>
+            <address class="text-center">
+              <strong>Western University - Robarts Research Institute</strong><br>
+              1151 Richmond St. N., 
+              London, Ontario, Canada<br>
+            P: (519) 931-5777 F: (519) 931-5789<br>E: primate.database@gmail.com
+            </address>
+			  
+          </div>
+          <div class="col-md-4 col-12">
+           
+          </div>
+			  
+        </div>
+      </div>
+    </div>
+    <hr>
+		
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © JMT Lab 2020. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+	<footer class="text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<a href="/citation.html" class="btn btn-outline-primary"> Please view Our Citation policy.</a>
+				</div>
+			    <div class="col-6">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; width: 50px;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><div class="font-weight-lighter" style="font-size:10px">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+				</div>  
+			</div>
+		</div>
+	</footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>

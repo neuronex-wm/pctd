@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index,follow,archive"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <title>Primate Cell Type Database</title>
+	  
+	 <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154856577-1"></script>
+	<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154856577-1');
+    </script>
+    <!-- Bootstrap -->
+    <!-- Bootstrap CSS - ADD THIS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link href="css/test2.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Primate Cell Type Database</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="ourTeam.html">Our Team</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Data
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="ephysCT.html">Electrophysiology</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0" action="search.html">
+          <input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+	  <section id="home">
+<div class="bg-img">
+	<div id="contentContainer" class="trans3d"> 
+	<section id="carouselContainer" class="trans3d">
+        <figure id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell1.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item2" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell1.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item3" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell2.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item4" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell2.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item5" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell3.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item6" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell3.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item7" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell4.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item8" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell4.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item9" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell5.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item10" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell5.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item11" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell6.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item12" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell6.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item13" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/cell7.png" style="width:170px;height:170px;"></div></figure>
+		<figure id="item14" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/morph Cells/ecell7.png" style="width:170px;height:170px;"></div></figure>
+	</section>
+	</div>
+		  </div>
+	<center><h1 id=whiteh1Title>Primate Cell Type Database</h1></center>
+
+	  </section>
+	  <section>
+		  
+        <div class="container">
+		<div class="row">
+        <div class="col-12">
+          
+              <center><p><br>Intracellular recordings of non-human primates (NHP) cells sampled from the lateral prefrontal cortex.
+			        <b><p id="length" style="display:inline"></p></b> patch clamp recordings for 2 protocols: 1 second current pulse &amp; 3 millisecond pulse. Morphology obtained by biocytin injections and confocal imaging at 63x magnification.</p></center>
+              <script>			
+                jQuery.get("../data/box2_ephys.json").done(function(data){	
+                    document.getElementById("length").innerHTML=Object.keys(data).length;
+              });
+              </script>
+              <!--<p><a class="btn btn-primary btn-lg" href="#" role="button"}>Learn more through our Technical White Papers »</a></p>-->
+            </div>
+          </div>
+        </div>
+    </section>
+	  <hr>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Ex vivo data&nbsp;</h2>
+            <p>We have a suite of experimental data generated recently in the lab including: electrophysiology, morphology, and transcriptomics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-4 col-12">
+			  <a href="ephysCT.html" id="linkColor">
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <img class="me-3" src="images/waveform.png" alt="waveform"  style="width:50px;height:50px;">
+                <div class="flex-grow-1">
+                  <h5 class="mt-0 mb-1">Electrophysiology</h5>
+                  Patch clamp recordings for various stimulation protocols (i.e., long current pulse, 3ms pulse, ramp, etc.).
+                </div>
+              </li>
+            </ul>
+			  </a>
+          </div>
+			
+       
+        </div>
+      </div>
+    </section>
+    
+    <hr>
+    <section>
+      
+    </section>
+		  
+    <hr>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+		
+          <div class="col-md-4 col-12 col-lg-7">
+            <h3 class="text-center">Contact Us</h3>
+            <address class="text-center">
+              <strong>Western University - Robarts Research Institute</strong><br>
+              1151 Richmond St. N., 
+              London, Ontario, Canada<br>
+            P: (519) 931-5777 F: (519) 931-5789<br>
+            </address>
+			  
+          </div>
+          <div class="col-md-4 col-12">
+            
+          </div>
+			  
+        </div>
+      </div>
+    </div>
+    <hr>
+		
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © JMT Lab 2020. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+	<footer class="text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<a href="/citation.html" class="btn btn-outline-primary"> Please view Our Citation policy.</a>
+				</div>
+			    <div class="col-6">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; width: 50px;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><div class="font-weight-lighter" style="font-size:10px">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+				</div>  
+			</div>
+		</div>
+	</footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="js/gsap.min.js"></script>
+	<script src="js/script.js"></script>
+  </body>
+</html>
