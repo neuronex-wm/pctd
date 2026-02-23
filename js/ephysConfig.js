@@ -137,12 +137,7 @@ var EPHYS_CONFIG = {
                 tickCount: 6       // hint: max number of unique categories expected
             }
         },
-        { key: 'Cortical layer', label: 'Cortical Layer', type: 'categorical',
-                parallelPlot: {
-                // Categorical axis — tick values are auto-generated from data
-                tickCount: 6       // hint: max number of unique categories expected
-            }
-         },
+        { key: 'Cortical layer', label: 'Cortical Layer', type: 'categorical'},
         { key: 'cellID',         label: 'Cell ID',        type: 'identifier'  }
     ],
 

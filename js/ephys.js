@@ -264,7 +264,7 @@ function getIdSelections() {
 
 //function to generate plots
 function maketrace(row) {
-    var url = "https://ptcd-traces.s3.us-east-2.amazonaws.com/" + row.cellID + ".csv"
+    var url = "./data/traces/" + row.internalID + ".csv"
     Plotly.d3.csv(url, function (rows) {
         data = []
         var i = 1
