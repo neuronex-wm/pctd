@@ -5,17 +5,9 @@ var $graphDiv;
 var selections = [];
 var ephysData = null;
 var timeseries;
-var spec_keys = ['Species', 'Sex', 'Cortical area', 'Dendrite type', 'Cortical layer', 'cellID'];
-var means = {
-    'AP halfwidth': 0.852348754, 
-    'AP amplitude': 68.54822064, 
-    'Resting potential': -67.196121, 
-    'Rheobase': 125.0320281,
-    'Resistance': 303.2528261, 
-    'Time Constant': 30.44950178, 
-    'Maximum firing rate': 44.07829181, 
-    'Median instantanous frequency': 66.63939502
-};
+// Derived from EPHYS_CONFIG (see js/ephysConfig.js)
+var spec_keys = EPHYS_CONFIG._metadataKeys;
+var means = EPHYS_CONFIG._means;
 
 $(document).ready(function() {
     // Initialize global variables that depend on DOM
@@ -30,6 +22,10 @@ $(document).ready(function() {
     }).done(function (data) {
         // Store data globally for reuse
         ephysData = data;
+
+        // Compute population means from the loaded data
+        EPHYS_CONFIG.computeMeans(data);
+        means = EPHYS_CONFIG._means;
         
         // Load data into the table
         $table.bootstrapTable('load', data);
@@ -125,15 +121,14 @@ function detailFormatter(index, row) {
     html.push('</div>');
     html.push('</div>');
     
-    // Ephys Details Card
+    // Ephys Details Card — uses EPHYS_CONFIG._detailViewFeatures for order & labels
     html.push('<div class="info-card">');
     html.push('<h6 class="section-title"><i class="bi bi-lightning"></i> Ephys Details</h6>');
     html.push('<div class="info-grid two-col">');
-    $.each(row, function (key, value) {
-        if (!spec_keys.includes(key)){	  	
-            if (typeof value == "number") {
-                html.push('<div class="info-item"><span class="info-label">' + key + '</span><span class="info-value">' + (Math.round(value * 100) / 100) + '</span></div>');
-            }
+    EPHYS_CONFIG._detailViewFeatures.forEach(function (feat) {
+        var value = row[feat.key];
+        if (typeof value === 'number') {
+            html.push('<div class="info-item"><span class="info-label">' + feat.label + '</span><span class="info-value">' + (Math.round(value * 100) / 100) + '</span></div>');
         }
     });
     html.push('</div>');
@@ -207,37 +202,42 @@ function filterByPlot(keys, ranges) {
     
     // Work with a copy to avoid mutating global data
     var data = ephysData.map(function(obj) { return Object.assign({}, obj); });
-    var spenc = catunpack(data, 'Species');
-    var areaenc = catunpack(data, 'Cortical area');
-    data.map(function (obj, i){
-        obj['speciesenc'] = spenc[i];
-        obj['areaenc'] = areaenc[i];
+
+    // Build the dimension config list in the same order used by generateParallelPlot()
+    var dimConfigs = _buildParallelDimConfigs();
+
+    // Encode categorical columns onto each row
+    dimConfigs.forEach(function (dc) {
+        if (dc.type === 'categorical') {
+            var encoded = catunpack(data, dc.key);
+            data.forEach(function (obj, i) {
+                obj[dc.key + '_enc'] = encoded[i];
+            });
+        }
     });
 
-    // brute force filtering, its not the most efficient but it works for now. 
-    // A coder with more experience might optimize this. Or make the features dynamic.
+    // Dynamic filtering — iterate dimension configs in the same order as
+    // the parallel-coords axes so the positional `ranges` array lines up.
     var newArray = data.filter(function (el) {
-        
-        return el['speciesenc'] <= ranges[0][1] &&
-            el['speciesenc'] >= ranges[0][0] &&
-            el['AP halfwidth'] <= ranges[1][1] &&
-            el['AP halfwidth'] >= ranges[1][0] &&
-            el['AP amplitude'] <= ranges[2][1] &&
-            el['AP amplitude'] >= ranges[2][0] &&
-            el['Rheobase'] <= ranges[3][1] &&
-            el['Rheobase'] >= ranges[3][0] &&
-            el['Resistance'] <= (10**ranges[4][1]) &&
-            el['Resistance'] >= (10**ranges[4][0]) &&
-            el['Time Constant'] <= (10**ranges[5][1]) &&
-            el['Time Constant'] >= (10**ranges[5][0]) &&
-            el['Maximum firing rate'] <= ranges[6][1] &&
-            el['Maximum firing rate'] >= ranges[6][0] &&
-            el['areaenc'] <= ranges[7][1] &&
-            el['areaenc'] >= ranges[7][0];
+        for (var i = 0; i < dimConfigs.length; i++) {
+            var dc = dimConfigs[i];
+            var lo = ranges[i][0];
+            var hi = ranges[i][1];
 
+            if (dc.type === 'categorical') {
+                var val = el[dc.key + '_enc'];
+                if (val < lo || val > hi) return false;
+            } else if (dc.scale === 'log') {
+                // Parallel-coords axis is in log-space; convert bounds back
+                if (el[dc.key] < Math.pow(10, lo) || el[dc.key] > Math.pow(10, hi)) return false;
+            } else {
+                if (el[dc.key] < lo || el[dc.key] > hi) return false;
+            }
+        }
+        return true;
     });
-    let result = newArray.map(function (a) { return a['cellID']; });
 
+    let result = newArray.map(function (a) { return a['cellID']; });
     $table.bootstrapTable('filterBy', { 'cellID': result });
 }
 
@@ -477,16 +477,8 @@ $(function () {
 function generateScatterPlot(xFeature, yFeature) {
     if (!ephysData) return;
     
-    // Feature display names mapping
-    var featureLabels = {
-        'AP halfwidth': 'Half Width (ms)',
-        'AP amplitude': 'AP Height (mV)',
-        'Rheobase': 'Rheobase (pA)',
-        'Resistance': 'Resistance (MΩ)',
-        'Time Constant': 'Time Constant (ms)',
-        'Resting potential': 'Resting Potential (mV)',
-        'Maximum firing rate': 'Maximum Firing Rate (Hz)'
-    };
+    // Feature display names derived from config
+    var featureLabels = EPHYS_CONFIG._featureLabels;
     
     var rows = ephysData;
     
@@ -547,6 +539,43 @@ function generateScatterPlot(xFeature, yFeature) {
 }
 
 
+/**
+ * Build the ordered list of dimension configs used by both
+ * generateParallelPlot() and filterByPlot().  Keeping this in
+ * one place ensures the positional indices always match.
+ */
+function _buildParallelDimConfigs() {
+    var configs = [];
+
+    // Numeric features with parallelPlot enabled
+    EPHYS_CONFIG.features.forEach(function (f) {
+        if (f.parallelPlot) {
+            configs.push({
+                key:       f.key,
+                label:     f.key,        // parallel-coords uses data key as label
+                range:     f.parallelPlot.range,
+                scale:     f.parallelPlot.scale || 'linear',
+                tickStep:  f.parallelPlot.tickStep,
+                type:      'numeric'
+            });
+        }
+    });
+
+    // Categorical metadata with parallelPlot enabled
+    EPHYS_CONFIG.metadata.forEach(function (m) {
+        if (m.parallelPlot) {
+            configs.push({
+                key:       m.key,
+                label:     m.key,
+                tickCount: m.parallelPlot.tickCount || 6,
+                type:      'categorical'
+            });
+        }
+    });
+
+    return configs;
+}
+
 function generateParallelPlot(){
     if (!ephysData) return;
     
@@ -557,68 +586,50 @@ function generateParallelPlot(){
     const logrange = (start, stop, step = 1) =>
             Array(Math.ceil((stop - start) / step)).fill(start).map((x, y) => Math.round(10**(x + y * step)));
 
+    // Build dimensions array from config
+    var dimConfigs = _buildParallelDimConfigs();
+    var dimensions = dimConfigs.map(function (dc) {
+        if (dc.type === 'categorical') {
+            var tickvals = [];
+            for (var i = 0; i < dc.tickCount; i++) tickvals.push(i);
+            return {
+                label:    dc.label,
+                tickvals: tickvals,
+                ticktext: catlabel(rows, dc.key),
+                values:   catunpack(rows, dc.key)
+            };
+        }
+        // Numeric dimension
+        var dim = {
+            range:  dc.range,
+            label:  dc.label,
+            values: dc.scale === 'log' ? logunpack(rows, dc.key) : unpack(rows, dc.key)
+        };
+        if (dc.scale === 'log' && dc.tickStep) {
+            dim.tickvals = range(dc.range[0], dc.range[1] + dc.tickStep, dc.tickStep);
+            dim.ticktext = logrange(dc.range[0], dc.range[1] + dc.tickStep, dc.tickStep);
+        }
+        return dim;
+    });
+
+    // Colour by the configured default feature
+    var colorByKey = EPHYS_CONFIG.defaults.parallelColorBy;
+    var colorByLabel = EPHYS_CONFIG._featureLabels[colorByKey] || colorByKey;
+
     var data = [{
         type: 'parcoords',
         pad: [80, 80, 80, 80],
         line: {
             colorscale: "viridis",
-            color: unpack(rows, 'AP halfwidth'),
+            color: unpack(rows, colorByKey),
             showscale: true,
             colorbar: {
-                title: 'AP Halfwidth',
+                title: colorByLabel,
                 thickness: 15,
                 len: 0.5
             }
         },
-        // [
-        //         [0, '#667eea'],
-        //         [0.5, '#764ba2'],
-        //         [1, '#f093fb']
-        //     ],
-        dimensions: [
-            ///MARM only for now so no need for species
-        //     {
-        //     label: 'Species',
-        //     tickvals: [0,1, 2],
-        //     ticktext: catlabel(rows, 'Species'),
-        //     values: catunpack(rows, 'Species')
-        // },
-        {
-            range: [0, 3],
-            label: 'AP halfwidth',
-            values: unpack(rows, 'AP halfwidth')
-        },
-        {
-            range: [0, 120],
-            label: 'AP amplitude',
-            values: unpack(rows, 'AP amplitude')
-        }, {
-            label: 'Rheobase',
-            range: [0, 500],
-            values: unpack(rows, 'Rheobase')
-        }, {
-            label: 'Resistance',
-            range: [0.75, 4],
-            tickvals: range(0.75, 4.5, 0.5),
-            ticktext: logrange(0.75, 4.5, 0.5),
-            values: logunpack(rows, 'Resistance')
-        }, {
-            label: 'Time Constant',
-            range: [0,2.5],
-            tickvals: range(0.5, 2.5, 0.25),
-            ticktext: logrange(0.5, 2.5, 0.25),
-            values: logunpack(rows, 'Time Constant')
-        }, {
-            label: 'Maximum firing rate',
-            range: [0, 250],
-            values: unpack(rows, 'Maximum firing rate')
-        },
-        {
-            label: 'Cortical area',
-            tickvals: [0,1,2,3,4,5],
-            ticktext: catlabel(rows, 'Cortical area'),
-            values: catunpack(rows, 'Cortical area')
-        }]
+        dimensions: dimensions
     }];
 
     var layout = {
@@ -771,7 +782,7 @@ function generate_all_graphs(){
 
 
     // feature driven scatter plot - generate initial plot
-    generateScatterPlot('AP halfwidth', 'AP amplitude');
+    generateScatterPlot(EPHYS_CONFIG.defaults.scatterX, EPHYS_CONFIG.defaults.scatterY);
     
     // Add event listeners for dropdown changes
     $('#scatterXAxis').on('change', function() {
@@ -792,7 +803,7 @@ function generate_all_graphs(){
     // Generate UMAP plot
     //generateUMAPPlot();
 
-    //wait a few seconds then trigger resize ont he scatter plots to make them responsive
+    //wait a few seconds then trigger resize on the scatterplots to make them responsive
     setTimeout(() => { Plotly.Plots.resize(document.getElementById("graphDiv_scatter2")); }, 2000);
 
 
