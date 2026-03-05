@@ -83,8 +83,8 @@
 			<button id="filter_btn2" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#Scatter2Filter" role="button"
 				aria-expanded="false" aria-controls="Scatter2Filter">Filter - Scatter</button>
 
-			<!-- <button id="filter_btn4" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#Scatter4Filter" role="button"
-				aria-expanded="false" aria-controls="Scatter4Filter">Filter - UMAP</button> -->
+			<button id="filter_btn4" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#Scatter4Filter" role="button"
+				aria-expanded="false" aria-controls="Scatter4Filter">Filter - UMAP</button>
 			<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tableData"
 				aria-expanded="true" aria-controls="tableData">Table</button>
 		</span>
@@ -160,11 +160,21 @@
 				<div class="col-12 graph-responsive-wrapper">
 					<div class="card card-body">
 						<!-- Umap -->
-						<div class="row align-items-center">
-							<div class="col-12 col-md-6">
-								<div id="graphDiv_scatter4"></div>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="umapColorBy" class="form-label">Color by:</label>
+								<select id="umapColorBy" class="form-select">
+									<option value="AP halfwidth" selected>AP Halfwidth (ms)</option>
+									<option value="Amplitude">AP Amplitude (mV)</option>
+									<option value="Rheobase">Rheobase (pA)</option>
+									<option value="Resistance">Resistance (MΩ)</option>
+									<option value="Time Constant">Time Constant (ms)</option>
+									<option value="Resting potential">Resting Potential (mV)</option>
+									<option value="Max Firing Rate">Maximum Firing Rate (Hz)</option>
+								</select>
 							</div>
 						</div>
+						<div id="graphDiv_scatter4"></div>
 						<!-- Umap end -->
 					</div>
 				</div>

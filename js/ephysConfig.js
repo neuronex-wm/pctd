@@ -160,10 +160,11 @@ var EPHYS_CONFIG = {
     // ── Defaults ────────────────────────────────────────────────────────
     defaults: {
         scatterX: 'AP halfwidth',         // initial X-axis feature for scatter plot
-        scatterY: 'Amplitude',         // initial Y-axis feature for scatter plot
+        scatterY: 'Amplitude',            // initial Y-axis feature for scatter plot
         tableSort: 'Resting potential',   // default table sort column (data key)
         tableSortOrder: 'asc',
-        parallelColorBy: 'AP halfwidth'   // feature used for parallel-coords colour
+        parallelColorBy: 'AP halfwidth',  // feature used for parallel-coords colour
+        umapColorBy: 'AP halfwidth'       // initial colour-by feature for UMAP plot
     }
 };
 
