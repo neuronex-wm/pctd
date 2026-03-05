@@ -60,6 +60,9 @@ def convert_conventions(df):
     if OTHER_MAPPINGS:
         df = df.rename(columns=OTHER_MAPPINGS)
 
+    #sort so that columns will full of NaNs will be at the end, and the more complete columns will be at the beginning. 
+    # This is just for aesthetics, it is not required for the old naming conventions. Just keeps the PI's happy
+    df = df.reindex(sorted(df.columns, key=lambda col: df[col].isna().sum()), axis=1)
     return df
 
 
