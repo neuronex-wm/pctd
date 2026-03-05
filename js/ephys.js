@@ -625,7 +625,7 @@ function generateParallelPlot(){
             color: unpack(rows, colorByKey),
             showscale: true,
             colorbar: {
-                title: colorByLabel,
+                title: { text: colorByLabel, font: { size: 10 }, side: 'right' },
                 thickness: 15,
                 len: 0.5
             }
@@ -702,9 +702,10 @@ function generateUMAPPlot(colorFeature) {
             colorscale: 'Viridis',
             showscale: true,
             colorbar: {
-                title: featureLabels[colorFeature] || colorFeature,
-                thickness: 15,
-                len: 0.6
+                title: { text: featureLabels[colorFeature] || colorFeature, font: { size: 10 }, side: 'right' },
+                thickness: 8,
+                len: 0.4,
+                tickfont: { size: 9 }
             },
             size: 7,
             opacity: 0.85
