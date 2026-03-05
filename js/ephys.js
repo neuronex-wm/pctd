@@ -621,6 +621,7 @@ function generateParallelPlot(){
         pad: [80, 80, 80, 80],
         line: {
             colorscale: "viridis",
+            autocolorscale: false,
             color: unpack(rows, colorByKey),
             showscale: true,
             colorbar: {
