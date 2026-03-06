@@ -16,3 +16,6 @@ node_modules/
 package-lock.json
 package.json
 .github/workflows/playwright.yml
+
+#venv
+.venv/
