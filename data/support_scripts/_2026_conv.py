@@ -18,6 +18,9 @@ AGE_COL = 'Age'
 CELL_ID_COL = 'Identifier'
 HASH_indiv = False 
 
+CHECK_PLOT = True
+PLOT_FOLDER = r".//data//traces"
+
 #other mappings; while we are here you can rename some columns if you want. Make 'em more user friendly or something. This is just an example, you will need to adjust it based on the actual column names in your dataset.
 OTHER_MAPPINGS = {
     'RinHD': 'Resistance',
@@ -32,6 +35,13 @@ OTHER_MAPPINGS = {
     'dendriticType': "Dendrite type",
     "SomaLayerLoc": "Cortical layer"
 }
+
+def map_dendritic_type(value):
+    mapping = {
+        'A': 'Aspiny',
+        'S': 'Spiny',
+    }
+    return mapping.get(value, 'Unk.')
 
 
 def convert_conventions(df):
@@ -60,9 +70,23 @@ def convert_conventions(df):
     if OTHER_MAPPINGS:
         df = df.rename(columns=OTHER_MAPPINGS)
 
+    #determine if the cells have a plot
+    if CHECK_PLOT:
+        import glob
+        plot_files = glob.glob(PLOT_FOLDER + "//*.csv")
+        plot_ids = [f.split("\\")[-1].split(".")[0] for f in plot_files]
+        df['hasPlot'] = df['internalID'].apply(lambda x: x in plot_ids)
+
+    #map dendritic type to the old naming conventions
+    if 'Dendrite type' in df.columns:
+        df['Dendrite type'] = df['Dendrite type'].apply(map_dendritic_type)
+
     #sort so that columns will full of NaNs will be at the end, and the more complete columns will be at the beginning. 
     # This is just for aesthetics, it is not required for the old naming conventions. Just keeps the PI's happy
+
     df = df.sort_values(by='Amplitude', ascending=False)
+    if "hasPlot" in df.columns:
+        df = df.sort_values(by='hasPlot', ascending=False)
     return df
 
 
