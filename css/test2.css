@@ -282,12 +282,69 @@ h5, .h5 {
 }
 
 /* Ensure graph divs are responsive and centered */
-#graphDiv, #graphDiv_scatter2, #graphDiv_scatter4 {
+#graphDiv, #graphDiv_scatter2 {
   width: 100%;
   max-width: 100%;
   height: auto;
   min-height: 400px;
   margin: 0 auto;
+}
+
+/* UMAP container: fill column height on large screens, square when stacked */
+#graphDiv_scatter4 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* On large screens, fill the card height (matches paracoords row) */
+@media (min-width: 992px) {
+  .col-lg-3.d-flex > .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .col-lg-3.d-flex > .card > .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  #graphDiv_scatter4 {
+    flex: 1;
+    height: 100%;
+  }
+}
+
+/* When stacked (below lg), keep square and cap size */
+@media (max-width: 991px) {
+  #graphDiv_scatter4 {
+    aspect-ratio: 1 / 1;
+    max-width: 450px;
+  }
+}
+
+/* Keep paracoords landscape so axes stay readable */
+#graphDiv {
+  aspect-ratio: 8 / 2;
+}
+
+/* Reduce plot heights on smaller screens */
+@media (max-width: 991px) {
+  #graphDiv, #graphDiv_scatter2 {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  #graphDiv, #graphDiv_scatter2 {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  #graphDiv, #graphDiv_scatter2 {
+    min-height: 250px;
+  }
 }
 
 .table-card-like tbody tr{

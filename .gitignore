@@ -19,3 +19,4 @@ package.json
 
 #venv
 .venv/
+.playwright-mcp/

@@ -772,11 +772,28 @@ function generate_all_graphs(){
     });
 
     //wait a few seconds then trigger resize on the scatterplots to make them responsive
-    setTimeout(() => { Plotly.Plots.resize(document.getElementById("graphDiv_scatter2")); }, 2000);
+    setTimeout(function () { resizeAllPlots(); }, 2000);
 
-
-    //listen for clicks on filter_btn2 to resize scatter plot
+    //listen for clicks on filter buttons to resize plots after collapse transition
+    $('#filter_btn').on('click', function() {
+        setTimeout(function () { resizeAllPlots(); }, 500);
+    });
     $('#filter_btn2').on('click', function() {
-        setTimeout(() => { Plotly.Plots.resize(document.getElementById("graphDiv_scatter2")); }, 500);
+        setTimeout(function () { resizeAllPlots(); }, 500);
+    });
+
+    // Debounced window resize handler so plots redraw at breakpoint transitions
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () { resizeAllPlots(); }, 250);
+    });
+}
+
+function resizeAllPlots() {
+    var ids = ['graphDiv', 'graphDiv_scatter2', 'graphDiv_scatter4'];
+    ids.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el && el.data) { Plotly.Plots.resize(el); }
     });
 }
