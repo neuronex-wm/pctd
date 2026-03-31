@@ -90,6 +90,8 @@ function detailFormatter(index, row) {
     var html = []
     var url = "./data/traces/" + row.internalID + ".csv"
     var plot_bool = doesFileExist(url)
+    var morph_url = "./data/morph/" + row.internalID + "_morph.png"
+    var morph_bool = doesFileExist(morph_url)
 
     html.push('<div class="detail-container">');
     html.push('<div class="row">');
@@ -120,6 +122,14 @@ function detailFormatter(index, row) {
     });
     html.push('</div>');
     html.push('</div>');
+
+    // Morphology card (only if image exists)
+    if (morph_bool) {
+        html.push('<div class="info-card">');
+        html.push('<h6 class="section-title"><i class="bi bi-diagram-3"></i> Morphology</h6>');
+        html.push('<div style="text-align:center;"><img src="' + morph_url + '" class="img-fluid" alt="Morphology reconstruction" style="max-height:250px;"></div>');
+        html.push('</div>');
+    }
     
     // Ephys Details Card — uses EPHYS_CONFIG._detailViewFeatures for order & labels
     html.push('<div class="info-card">');

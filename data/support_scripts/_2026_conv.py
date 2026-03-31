@@ -21,6 +21,9 @@ HASH_indiv = False
 CHECK_PLOT = True
 PLOT_FOLDER = r".//data//traces"
 
+CHECK_MORPH = True
+MORPH_FOLDER = r".//data//morph"
+
 #other mappings; while we are here you can rename some columns if you want. Make 'em more user friendly or something. This is just an example, you will need to adjust it based on the actual column names in your dataset.
 OTHER_MAPPINGS = {
     'RinHD': 'Resistance',
@@ -77,6 +80,11 @@ def convert_conventions(df):
         plot_ids = [f.split("\\")[-1].split(".")[0] for f in plot_files]
         df['hasPlot'] = df['internalID'].apply(lambda x: x in plot_ids)
 
+    if CHECK_MORPH:
+        morph_files = glob.glob(MORPH_FOLDER + "//*.png")
+        morph_ids = [f.split("\\")[-1].split("_morph.png")[0] for f in morph_files]
+        df['hasMorph'] = df['internalID'].apply(lambda x: x in morph_ids)
+
     #map dendritic type to the old naming conventions
     if 'Dendrite type' in df.columns:
         df['Dendrite type'] = df['Dendrite type'].apply(map_dendritic_type)
@@ -85,8 +93,13 @@ def convert_conventions(df):
     # This is just for aesthetics, it is not required for the old naming conventions. Just keeps the PI's happy
 
     df = df.sort_values(by='Amplitude', ascending=False)
+    #sort by hasPlot and hasMorph so that cells with plots and morphs will be at the beginning, and cells without plots and morphs will be at the end. This is just for aesthetics, it is not required for the old naming conventions. Just keeps the PI's happy
     if "hasPlot" in df.columns:
         df = df.sort_values(by='hasPlot', ascending=False)
+    
+    if "hasMorph" in df.columns:
+        df = df.sort_values(by='hasMorph', ascending=False)
+
     return df
 
 
