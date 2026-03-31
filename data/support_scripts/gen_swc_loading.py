@@ -1,3 +1,6 @@
+# Script to load SWC files and save them as PNG images for use in the web app. 
+# This is a one-time script to convert the SWC files to PNG images, which can then be used in the web app without needing to load the SWC files directly.
+
 import glob
 import pandas as pd
 import numpy as np

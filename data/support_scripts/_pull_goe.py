@@ -1,3 +1,6 @@
+"""
+Pulls pregenerated GOE traces from the provided directory, renames them according to the internalID to cellID mapping in the provided CSV, and copies them to the new directory.
+"""
 import pandas
 import os
 import shutil

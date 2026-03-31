@@ -17,6 +17,9 @@ package-lock.json
 package.json
 .github/workflows/playwright.yml
 
+#dandi files
+*.nwb
+
 #venv
 .venv/
 .playwright-mcp/
