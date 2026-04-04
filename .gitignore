@@ -23,3 +23,5 @@ package.json
 #venv
 .venv/
 .playwright-mcp/
+inspect
+001776/*
