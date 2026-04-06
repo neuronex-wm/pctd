@@ -1,17 +1,17 @@
 // Declare global variables outside $(document).ready()
-var zip;
 var $table;
 var $graphDiv;
-var selections = [];
 var ephysData = null;
 var timeseries;
 // Derived from EPHYS_CONFIG (see js/ephysConfig.js)
 var spec_keys = EPHYS_CONFIG._metadataKeys;
 var means = EPHYS_CONFIG._means;
+// DANDI download maps (populated on page load)
+var dandiMapping = null;   // cellID (string) → DANDI path
+var dandiAssetMap = null;  // DANDI path → asset_id
 
 $(document).ready(function() {
     // Initialize global variables that depend on DOM
-    zip = new JSZip();
     $table = $('#table');
     $graphDiv = $('#graphDiv');
     
@@ -39,14 +39,42 @@ $(document).ready(function() {
         generate_all_graphs();
     });
 
-    
+    // Load DANDI cellID → path mapping from CSV
+    $.ajax({
+        url: 'data/dandi_mapping.csv',
+        dataType: 'text'
+    }).done(function (csvText) {
+        dandiMapping = {};
+        var lines = csvText.split('\n');
+        for (var i = 1; i < lines.length; i++) {
+            var cols = lines[i].split(',');
+            if (cols.length >= 3 && cols[0].trim()) {
+                var cellID = cols[0].trim();
+                var dandiPath = cols[2].trim()
+                    .replace(/^001776[\\\/]/, '')
+                    .replace(/\\/g, '/');
+                if (dandiPath) {
+                    dandiMapping[cellID] = dandiPath;
+                }
+            }
+        }
+    });
+
+    // Load DANDI asset list → build path → asset_id map
+    $.ajax({
+        url: 'https://api.dandiarchive.org/api/dandisets/001776/versions/draft/assets/?page_size=1000',
+        dataType: 'json'
+    }).done(function (resp) {
+        dandiAssetMap = {};
+        if (resp && resp.results) {
+            resp.results.forEach(function (asset) {
+                dandiAssetMap[asset.path] = asset.asset_id;
+            });
+        }
+    });
 });
 
 
-var Promise = window.Promise;
-if (!Promise) {
-    Promise = JSZip.external.Promise;
-}
 function nameFormatter(value, row, field, index) {
 
     if (typeof value == 'string' && value == '') {
@@ -74,8 +102,7 @@ function reportFormatter(value, row) {
     return '<a class="fa fa-exclamation-circle" onclick="on(\'' + row.ID + '\')"></a>';
 }
 function linkFormatter(value, row) {
-    /*return '<div class="dropright"><button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  onclick="showtoast()"">Download</button><div class="dropdown-menu"> <button id="dlzip" class="dropdown-item" href="#" class="btn btn-primary">Download (zip/abf)</button> <button id="dlnwb" class="dropdown-item" href="#">Download (NWB)</button></div></div>'; */
-    return '<div class="dropright"><button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</button><div class="dropdown-menu"> <a class="dropdown-item" href="http://primatedatabase.com/download?cell=' + row.internalID + '.abf" target="_blank" class="btn btn-primary">Download (abf)</a> <a class= "dropdown-item" href="http://primatedatabase.com/download?cell=' + row.internalID + '.nwb" target="_blank">Download (NWB)</a></div></div>';
+    return '<button class="btn btn-primary btn-sm" onclick="downloadFromDandi(' + row.cellID + ')">Download (NWB)</button>';
 }
 function morphFormatter(value, row) {
     if (value) {
@@ -260,15 +287,23 @@ function filterByID(ids) {
         $table.bootstrapTable('filterBy', { 'cellID': ids });
     }
 }
-// get table seletctions
-function getIdSelections() {
-
-    var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
-
-        return row.ID
-    })
-
-    return ids;
+// Download a single NWB file from DANDI Archive
+function downloadFromDandi(cellID) {
+    if (!dandiMapping || !dandiAssetMap) {
+        alert('Download data is still loading. Please try again shortly.');
+        return;
+    }
+    var dandiPath = dandiMapping[String(cellID)];
+    if (!dandiPath) {
+        alert('Download not available for this cell.');
+        return;
+    }
+    var assetId = dandiAssetMap[dandiPath];
+    if (!assetId) {
+        alert('Asset not found on DANDI for this cell.');
+        return;
+    }
+    window.location.href = 'https://api.dandiarchive.org/api/assets/' + encodeURIComponent(assetId) + '/download/';
 }
 
 
@@ -400,88 +435,7 @@ function makebar(row){
     
     Plotly.newPlot(document.getElementById(id+'_bar'), [trace1, trace2],layout, { displaylogo: false, responsive: true });
 }
-function urlToPromise(url) {
-    return new Promise(function (resolve, reject) {
-        JSZipUtils.getBinaryContent(url, function (err, data) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(data);
-            }
-        });
-    });
-}
-function resetMessage() {
-    $("#dlsel")
-        .text("");
-}
-function showtoast() {
-    $('.toast').toast('show');
-}
-function showMessage(text) {
-    resetMessage();
-    $("#dlsel")
-        .html(text);
-}
-$(function () {
-    $table.on('check.bs.table uncheck.bs.table ' +
-        'check-all.bs.table uncheck-all.bs.table',
-        function () {
 
-            selections = getIdSelections()
-
-        })
-    $("#dlsel").on("click", function () {
-
-        var ids
-        $("#dlsel").html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Generating ZIP...')
-        myWindow = window.open("http://primatedatabase.com/download", "download", "width=200, height=100");
-        myWindow.close();
-        ids = getIdSelections();
-
-        $.each(ids, function (idu, a) {
-            var dlurl = "https://d3baje3o5bqx2r.cloudfront.net/" + a + ".nwb"
-            var filename = a + ".nwb";
-            zip.file(filename, urlToPromise(dlurl), { binary: true });
-
-        });
-        zip.generateAsync({ type: "blob" }, function updateCallback(metadata) {
-            var msg = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Generating ZIP... Progression : ' + metadata.percent.toFixed(2) + " %";
-            if (metadata.currentFile) {
-                msg += ", current file = " + metadata.currentFile;
-            }
-            showMessage(msg);
-
-        })
-            .then(function callback(blob) {
-
-                // see FileSaver.js
-                saveAs(blob, "dataset.zip");
-
-                showMessage("Download Selected (Zip)");
-            }, function (e) {
-
-            });
-
-        return false;
-
-    })
-    $('#dropdownMenuButton').hover(function () {
-
-        $('.toast').toast('show');
-    });
-    $("#dlsel").click(function(){
-            
-            $('.toast').toast('show');
-            });
-    $("#dlall").click(function(){
-    
-            $('.toast').toast('show');
-            });
-
-    $('[data-toggle="tooltip"]').tooltip()
-
-})
 
 //function to generate dynamic scatter plot
 function generateScatterPlot(xFeature, yFeature) {
