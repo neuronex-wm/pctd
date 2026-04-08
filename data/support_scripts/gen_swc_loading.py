@@ -28,6 +28,21 @@ def main():
         output_file = output_file + ".png"
         fig.savefig(os.path.join(out_dir, output_file), dpi=300)
         plt.close(fig)
+
+        #make a smalll 48x48 thumbnail version of the image for use in the web app
+        thumbnail_file = os.path.basename(swc_file).replace('.swc', '_morph_thumb')
+        fig = plt.figure(figsize=(0.48, 0.48), dpi=100)
+        ax = fig.add_subplot(111)
+        morph.plot(fig=fig, ax=ax, color="k" )
+        ax.axis('off')
+        #make canvas transparent
+        fig.patch.set_alpha(0)
+        thumbnail_file = thumbnail_file.replace('.', '_')
+        thumbnail_file = thumbnail_file + ".png"
+        fig.savefig(os.path.join(out_dir, thumbnail_file), dpi=100)
+        plt.close(fig)
+
+
     return
 
 if __name__ == "__main__":
