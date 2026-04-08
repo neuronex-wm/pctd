@@ -1,27 +1,15 @@
 /* CUSTOM CSS FOR PCTD SITE - SMEST JUNE 2024 */
 
-#linkColor {
+#ephysLink {
 	color: inherit;
 	text-decoration: inherit;
 }
-#whiteh1Title {
+#heroTitle {
 	color:white;
 	opacity: 75%
 }
-#loadCell{
-	margin-left: 2rem;
-	margin-bottom: 0rem;
-	margin-top: -2rem;
-	align-content: left;
-}
 
-#morphDL{
-	margin-left: 5.5rem;
-	margin-top: 0.2rem;
-	align-content: left;
-}
-
-#electrophystitle{
+#pageTitle{
 	margin: 5rem 0;
 }
 .controls {
@@ -282,7 +270,7 @@ h5, .h5 {
 }
 
 /* Ensure graph divs are responsive and centered */
-#graphDiv, #graphDiv_scatter2 {
+#parallelCoordsPlot, #scatterPlot {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -291,7 +279,7 @@ h5, .h5 {
 }
 
 /* UMAP container: fill column height on large screens, square when stacked */
-#graphDiv_scatter4 {
+#umapPlot {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -309,7 +297,7 @@ h5, .h5 {
     display: flex;
     flex-direction: column;
   }
-  #graphDiv_scatter4 {
+  #umapPlot {
     flex: 1;
     height: 100%;
   }
@@ -317,32 +305,32 @@ h5, .h5 {
 
 /* When stacked (below lg), keep square and cap size */
 @media (max-width: 991px) {
-  #graphDiv_scatter4 {
+  #umapPlot {
     aspect-ratio: 1 / 1;
     max-width: 450px;
   }
 }
 
 /* Keep paracoords landscape so axes stay readable */
-#graphDiv {
+#parallelCoordsPlot {
   aspect-ratio: 8 / 2;
 }
 
 /* Reduce plot heights on smaller screens */
 @media (max-width: 991px) {
-  #graphDiv, #graphDiv_scatter2 {
+  #parallelCoordsPlot, #scatterPlot {
     min-height: 350px;
   }
 }
 
 @media (max-width: 767px) {
-  #graphDiv, #graphDiv_scatter2 {
+  #parallelCoordsPlot, #scatterPlot {
     min-height: 300px;
   }
 }
 
 @media (max-width: 575px) {
-  #graphDiv, #graphDiv_scatter2 {
+  #parallelCoordsPlot, #scatterPlot {
     min-height: 250px;
   }
 }
@@ -391,11 +379,11 @@ transform: scale(1);
   margin-left: 2rem;
   margin-top: 0rem;
 }
-#dwnld_btn {
+#downloadActions {
 	float:right;
 	padding:0.5rem;
 }
-#filter_btn {
+#filterParallelBtn {
 	margin-left: 0.5rem;
 }
 .btn-outline-success {
@@ -766,20 +754,20 @@ border-top: 1px solid #fff;
     align-items: center;
 }
 
-#dwnld_btn {
+#downloadActions {
     float: right;
     padding: 0.5rem;
     display: none;
 }
 
-#dlsel, #dlall {
+#dlsel, #browseDandiBtn {
     background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
     border: none;
     font-weight: 500;
     transition: all 0.2s ease;
 }
 
-#dlsel:hover, #dlall:hover {
+#dlsel:hover, #browseDandiBtn:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(40, 167, 69, 0.35);
 }
@@ -816,7 +804,7 @@ border-top: 1px solid #fff;
         align-items: stretch;
     }
     
-    #dwnld_btn {
+    #downloadActions {
         margin-left: 0;
         margin-top: 0.5rem;
     }

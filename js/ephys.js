@@ -1,6 +1,6 @@
 // Declare global variables outside $(document).ready()
 var $table;
-var $graphDiv;
+var $parallelCoordsPlot;
 var ephysData = null;
 var timeseries;
 // Derived from EPHYS_CONFIG (see js/ephysConfig.js)
@@ -13,7 +13,7 @@ var dandiAssetMap = null;  // DANDI path → asset_id
 $(document).ready(function() {
     // Initialize global variables that depend on DOM
     $table = $('#table');
-    $graphDiv = $('#graphDiv');
+    $parallelCoordsPlot = $('#parallelCoordsPlot');
     
     // Load data and initialize table
     $.ajax({
@@ -484,10 +484,10 @@ function generateScatterPlot(xFeature, yFeature) {
         showlegend: false
     };
     
-    Plotly.newPlot('graphDiv_scatter2', data, layout, { displaylogo: false, responsive: true });
+    Plotly.newPlot('scatterPlot', data, layout, { displaylogo: false, responsive: true });
     
-    var graphDiv = document.getElementById("graphDiv_scatter2");
-    graphDiv.on('plotly_selected', function (eventData) {
+    var scatterPlotEl = document.getElementById("scatterPlot");
+    scatterPlotEl.on('plotly_selected', function (eventData) {
         var ids = [];
         
         if (eventData && eventData.points) {
@@ -608,13 +608,13 @@ function generateParallelPlot(){
         }
     };
 
-    Plotly.newPlot('graphDiv', data, layout, { displaylogo: false, responsive: true });
-    var graphDiv = document.getElementById("graphDiv");
-    graphDiv.on('plotly_restyle', function (data) {
+    Plotly.newPlot('parallelCoordsPlot', data, layout, { displaylogo: false, responsive: true });
+    var parallelCoordsEl = document.getElementById("parallelCoordsPlot");
+    parallelCoordsEl.on('plotly_restyle', function (data) {
         var keys = [];
         var ranges = [];
 
-        graphDiv.data[0].dimensions.forEach(function (d) {
+        parallelCoordsEl.data[0].dimensions.forEach(function (d) {
             if (d.constraintrange === undefined) {
                 keys.push(d.label);
                 ranges.push([-9999, 9999]); //no filter applied, if values are ut
@@ -685,10 +685,10 @@ function generateUMAPPlot(colorFeature) {
         margin: { b: 40, r: 80, t: 20, l: 50 }
     };
 
-    Plotly.newPlot('graphDiv_scatter4', [trace], layout, { displaylogo: false, responsive: true });
+    Plotly.newPlot('umapPlot', [trace], layout, { displaylogo: false, responsive: true });
 
-    var graphDiv5 = document.getElementById('graphDiv_scatter4');
-    graphDiv5.on('plotly_selected', function (eventData) {
+    var $umapPlotEl = document.getElementById('umapPlot');
+    $umapPlotEl.on('plotly_selected', function (eventData) {
         var ids;
         if (eventData && eventData.points && eventData.points.length > 0) {
             ids = eventData.points.map(function (pt) { return pt.customdata; });
@@ -700,7 +700,7 @@ function generateUMAPPlot(colorFeature) {
 }
 
 function redraw_scatter(){
-    Plotly.restyle(document.getElementById("graphDiv_scatter2"));
+    Plotly.restyle(document.getElementById("scatterPlot"));
 }
 
 //function to generate plots
@@ -739,10 +739,10 @@ function generate_all_graphs(){
     setTimeout(function () { resizeAllPlots(); }, 2000);
 
     //listen for clicks on filter buttons to resize plots after collapse transition
-    $('#filter_btn').on('click', function() {
+    $('#filterParallelBtn').on('click', function() {
         setTimeout(function () { resizeAllPlots(); }, 500);
     });
-    $('#filter_btn2').on('click', function() {
+    $('#filterScatterBtn').on('click', function() {
         setTimeout(function () { resizeAllPlots(); }, 500);
     });
 
@@ -755,7 +755,7 @@ function generate_all_graphs(){
 }
 
 function resizeAllPlots() {
-    var ids = ['graphDiv', 'graphDiv_scatter2', 'graphDiv_scatter4'];
+    var ids = ['parallelCoordsPlot', 'scatterPlot', 'umapPlot'];
     ids.forEach(function (id) {
         var el = document.getElementById(id);
         if (el && el.data) { Plotly.Plots.resize(el); }

@@ -52,7 +52,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
-#linkColor {
+#ephysLink {
 	color: inherit;
 	text-decoration: inherit;
 }
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-#whiteh1Title {
+#heroTitle {
 	color:white;
 	opacity: 75%
 }
@@ -218,22 +218,7 @@ svg {
 table {
   border-collapse: collapse;
 }
-#loadCell{
-	margin-left: 2rem;
-	margin-bottom: 0rem;
-	margin-top: -2rem;
-	align-content: left;
-}
 
-#morphDL{
-	margin-left: 5.5rem;
-	margin-top: 0.2rem;
-	align-content: left;
-}
-
-#electrophystitle{
-	margin: 5rem 0;
-}
 .controls {
 	margin-top: -4rem;
 }
@@ -2500,11 +2485,11 @@ textarea.form-control {
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
 }
-#dwnld_btn {
+#downloadActions {
 	float:right;
 	padding:0.5rem;
 }
-#filter_btn {
+#filterParallelBtn {
 	margin-left: 0.5rem;
 }
 a.btn.disabled,

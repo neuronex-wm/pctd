@@ -1,5 +1,6 @@
 # This script will be used to organize all the nwbs for upload to DANDI
 # Here we will pull the NWBs (ID'd by internal name), and rename them according to the cellID mapping in the provided CSV, and copy them to the new directory for upload to DANDI.
+import argparse
 import glob
 
 import pandas
@@ -35,7 +36,7 @@ def find_electrode_group(nwb):
     return None, None
 
 
-def main():
+def main(retain_original_id=False):
     #read the csv
     df = pandas.read_csv(id_lookup_csv)
     #create a dictionary from the csv
@@ -55,7 +56,10 @@ def main():
                     os.makedirs(os.path.join(new_nwb_dir, subj))
 
                 cell_id = id_dict[internal_id]
-                new_file_name = str(cell_id) + ".nwb"
+                if retain_original_id:
+                    new_file_name = internal_id + ".nwb"
+                else:
+                    new_file_name = str(cell_id) + ".nwb"
                 shutil.copy(os.path.join(folder, nwb), os.path.join(new_nwb_dir, subj, new_file_name))
                 if not pynwb_check(os.path.join(new_nwb_dir, subj, new_file_name)): #if we cant read the NWB file with pynwb, we need to modify it to make it readable.
                     # the nwbs are currently broken due to matnwb issues. 
@@ -131,4 +135,14 @@ def main():
     return
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Prepare NWB files for DANDI upload.")
+    parser.add_argument("--data-folders", nargs='+', default=data_folders,
+                        help="List of folders to search for NWB files.")
+    parser.add_argument("--id-lookup-csv", default=id_lookup_csv,
+                        help="Path to the CSV file containing the internalID to cellID mapping.")
+    parser.add_argument("--new-nwb-dir", default=new_nwb_dir,
+                        help="Directory to save the renamed NWB files for DANDI upload.")
+    parser.add_argument("--retain-original-id", action="store_true", default=True,
+                        help="Include the original internal ID in the output file name (e.g. cellID_internalID.nwb)")
+    args = parser.parse_args()
+    main(retain_original_id=args.retain_original_id)

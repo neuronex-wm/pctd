@@ -6,6 +6,7 @@ import pynwb
 import os
 from pynwb import NWBHDF5IO
 from hdmf.common import DynamicTable, VectorData
+import shutil
 
 NWB_DIR = r"C:\Users\SMest\source\pctd\data\updated_nwbs"
 NWB_OUT_DIR = r"C:\Users\SMest\source\pctd\data\nwbs_with_morph"
@@ -13,6 +14,8 @@ NWB_OUT_DIR = r"C:\Users\SMest\source\pctd\data\nwbs_with_morph"
 CSV_FILE = r"C:\Users\SMest\source\pctd\data\box2_ephys.csv"
 
 SWC_DIR = r"C:\Users\SMest\Downloads\NXWM NC Paper - Morpho\NXWM NC Paper - Morpho"
+
+ORGIN_IDS = True
 
 def main():
     df = pandas.read_csv(CSV_FILE)
@@ -22,7 +25,7 @@ def main():
         swc_file = None #reset so we don't accidentally use the same swc file for multiple nwbs if there is an error in the code and we don't find a swc file for a particular nwb. This way we won't accidentally add the same swc file to multiple nwbs.
         #nwbs are labeled by cellID, swcs are by internalID, so we need to get the internalID from the cellID using the provided CSV
         cell_id = os.path.basename(nwb).split('.')[0]
-        internal_id = df[df['cellID'] == int(cell_id)]['internalID'].values[0]
+        internal_id = df[df['cellID'] == int(cell_id)]['internalID'].values[0] if not ORGIN_IDS else cell_id #if the original ids are in the nwbs, then we can just use the cell_id as the internal_id, since they are the same. Otherwise, we need to look up the internal_id using the cell_id from the CSV.
         #find the corresponding swc file    
         swc_file = [swc for swc in swcs if os.path.basename(swc).split('.')[0] == internal_id] #not all cells have swc files, so this will throw an error if there is no swc file for the cell. We can catch this error and just skip the cell if there is no swc file.
         if swc_file or len(swc_file) > 0: #if there is a swc file for the cell
@@ -66,7 +69,16 @@ def main():
                 print(nwb_data.processing['morphology']['SWC'])
                 print(f"X col:{nwb_data.processing['morphology']['SWC']['X'].data[:10]}")
 
-            
+        else:
+            #otherwise just copy the nwb file to the new directory without adding the swc data, since we want to keep all the nwbs in the new directory even if they don't have swc files, for consistency and record keeping. We can just use shutil.copy for this.
+            subj = internal_id[:3]
+            if not os.path.exists(os.path.join(NWB_OUT_DIR, subj)):
+                os.makedirs(os.path.join(NWB_OUT_DIR, subj))
+                out_path = os.path.join(NWB_OUT_DIR, subj, os.path.basename(nwb))
+            else:
+                out_path = os.path.join(NWB_OUT_DIR, subj, os.path.basename(nwb))
+            shutil.copy(nwb, out_path)
+
 
 
 
