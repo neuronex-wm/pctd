@@ -213,3 +213,6 @@ EPHYS_CONFIG._featureLabels = {};
 EPHYS_CONFIG.features.forEach(function (f) {
     EPHYS_CONFIG._featureLabels[f.key] = f.label;
 });
+EPHYS_CONFIG.metadata.forEach(function (m) {
+    EPHYS_CONFIG._featureLabels[m.key] = m.label;
+});

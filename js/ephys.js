@@ -540,10 +540,11 @@ function _buildParallelDimConfigs() {
     return configs;
 }
 
-function generateParallelPlot(){
+function generateParallelPlot(colorFeature){
     if (!ephysData) return;
     
     var rows = ephysData;
+    colorFeature = colorFeature || EPHYS_CONFIG.defaults.parallelColorBy;
     
     const range = (start, stop, step = 1) =>
             Array(Math.ceil((stop - start) / step)).fill(start).map((x, y) => x + y * step);
@@ -576,15 +577,57 @@ function generateParallelPlot(){
         return dim;
     });
 
-    // Colour by the configured default feature
-    var colorByKey = EPHYS_CONFIG.defaults.parallelColorBy;
+    // Colour by the selected feature (numeric or categorical)
+    var colorByKey = colorFeature;
     var colorByLabel = EPHYS_CONFIG._featureLabels[colorByKey] || colorByKey;
 
-    var data = [{
-        type: 'parcoords',
-        pad: [80, 80, 80, 80],
-        line: {
-            colorscale: "viridis",
+    // Determine whether the colour-by key is categorical
+    var isCategorical = EPHYS_CONFIG.metadata.some(function (m) {
+        return m.key === colorByKey && m.type === 'categorical';
+    });
+
+    var lineConfig;
+    if (isCategorical) {
+        var catColors = catunpack(rows, colorByKey);
+        var catLabels = catlabel(rows, colorByKey);
+        var nCats = catLabels.length;
+        // Qualitative palette (D3 Category10)
+        var palette = [
+            '#1f77b4','#ff7f0e','#2ca02c','#d62728','#9467bd',
+            '#8c564b','#e377c2','#7f7f7f','#bcbd22','#17becf'
+        ];
+        // Build a discrete colorscale mapping [0..nCats-1] to palette entries
+        var discreteScale = [];
+        for (var ci = 0; ci < nCats; ci++) {
+            var lo = ci / nCats;
+            var hi = (ci + 1) / nCats;
+            var c  = palette[ci % palette.length];
+            discreteScale.push([lo, c]);
+            discreteScale.push([hi, c]);
+        }
+        // Build tick positions at the centre of each band
+        var tickvals = [];
+        for (var ti = 0; ti < nCats; ti++) {
+            tickvals.push(ti);
+        }
+        lineConfig = {
+            colorscale: discreteScale,
+            autocolorscale: false,
+            color: catColors,
+            cmin: 0,
+            cmax: nCats - 1,
+            showscale: true,
+            colorbar: {
+                title: { text: colorByLabel, font: { size: 10 }, side: 'right' },
+                thickness: 15,
+                len: 0.5,
+                tickvals: tickvals,
+                ticktext: catLabels
+            }
+        };
+    } else {
+        lineConfig = {
+            colorscale: 'viridis',
             autocolorscale: false,
             color: unpack(rows, colorByKey),
             showscale: true,
@@ -593,7 +636,13 @@ function generateParallelPlot(){
                 thickness: 15,
                 len: 0.5
             }
-        },
+        };
+    }
+
+    var data = [{
+        type: 'parcoords',
+        pad: [80, 80, 80, 80],
+        line: lineConfig,
         dimensions: dimensions
     }];
 
@@ -727,6 +776,10 @@ function generate_all_graphs(){
 
     // Generate parallel plot
     generateParallelPlot();
+
+    $('#parallelColorBy').on('change', function () {
+        generateParallelPlot($('#parallelColorBy').val());
+    });
 
     // Generate UMAP plot
     generateUMAPPlot();

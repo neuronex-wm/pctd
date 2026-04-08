@@ -147,6 +147,23 @@
 				<!-- Paracoords: responsive width -->
 				<div class="col-12 col-lg-9">
 					<div class="card card-body">
+						<div class="mb-2 d-flex align-items-center gap-2">
+							<label for="parallelColorBy" class="form-label mb-0">Color by:</label>
+							<select id="parallelColorBy" class="form-select form-select-sm" style="width:auto;">
+								<option value="AP halfwidth" selected>AP Halfwidth (ms)</option>
+								<option value="Amplitude">AP Amplitude (mV)</option>
+								<option value="Rheobase">Rheobase (pA)</option>
+								<option value="Resistance">Resistance (MΩ)</option>
+								<option value="Time Constant">Time Constant (ms)</option>
+								<option value="Resting potential">Resting Potential (mV)</option>
+								<option value="Max Firing Rate">Maximum Firing Rate (Hz)</option>
+								<option value="Species">Species</option>
+								<option value="Sex">Sex</option>
+								<option value="Cortical area">Cortical Area</option>
+								<option value="Dendrite type">Dendrite Type</option>
+								<option value="Cortical layer">Cortical Layer</option>
+							</select>
+						</div>
 						<div id="parallelCoordsPlot"></div>
 					</div>
 				</div>
