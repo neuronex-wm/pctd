@@ -1,12 +1,262 @@
 /* CUSTOM CSS FOR PCTD SITE - SMEST JUNE 2024 */
 
+/* ========== DESIGN TOKENS ========== */
+:root {
+  --nav-bg: #0f172a;
+  --nav-bg-light: #1e293b;
+  --accent: #667eea;
+  --accent-hover: #5a67d8;
+  --text-primary: #f1f5f9;
+  --text-muted: #94a3b8;
+  --surface: #f8fafc;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* ========== NAVBAR ========== */
+.navbar-pctd {
+  background: var(--nav-bg);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-family);
+}
+
+.navbar-pctd .navbar-brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.navbar-pctd .navbar-brand:hover {
+  color: var(--accent);
+}
+
+.navbar-pctd .navbar-brand .bi {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.navbar-pctd .nav-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem !important;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.navbar-pctd .nav-link:hover,
+.navbar-pctd .nav-link:focus {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+.navbar-pctd .nav-link.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+.navbar-pctd .dropdown-menu {
+  background: var(--nav-bg-light);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  margin-top: 0.25rem;
+}
+
+.navbar-pctd .dropdown-item {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navbar-pctd .dropdown-item:hover,
+.navbar-pctd .dropdown-item:focus {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0.25rem;
+}
+
+.navbar-pctd .navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.navbar-pctd .navbar-search .form-control {
+  background: var(--nav-bg-light);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  border-radius: 2rem 0 0 2rem;
+  padding: 0.4rem 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.navbar-pctd .navbar-search .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.navbar-pctd .navbar-search .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(102,126,234,0.25);
+  outline: none;
+}
+
+.navbar-pctd .navbar-search .btn-search {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  border-radius: 0 2rem 2rem 0;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-pctd .navbar-search .btn-search:hover {
+  background: var(--accent-hover);
+}
+
+.navbar-pctd .navbar-toggler {
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* ========== PAGE HEADER (ephys) ========== */
+.page-header-bar {
+  background: linear-gradient(135deg, var(--nav-bg) 0%, var(--nav-bg-light) 100%);
+  padding: 1.5rem 0 1rem;
+  color: var(--text-primary);
+}
+
+.page-header-bar h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+  color: #fff;
+}
+
+.page-header-bar .header-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.page-header-bar .dandi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-header-bar .dandi-badge:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--text-primary);
+}
+
+.page-header-bar .view-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-header-bar .btn-view {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.page-header-bar .btn-view:hover,
+.page-header-bar .btn-view[aria-expanded="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.page-header-bar .btn-browse-dandi {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.page-header-bar .btn-browse-dandi:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--text-primary);
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background: var(--nav-bg);
+  color: var(--text-muted);
+  padding: 2rem 0 1.5rem;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: var(--text-primary);
+}
+
+.site-footer .footer-divider {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 1rem 0;
+}
+
+/* ========== HOME HERO ========== */
+#heroTitle {
+  color: white;
+  opacity: 1;
+  font-family: var(--font-family);
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
 #ephysLink {
 	color: inherit;
 	text-decoration: inherit;
-}
-#heroTitle {
-	color:white;
-	opacity: 75%
 }
 
 #pageTitle{
@@ -580,7 +830,7 @@ border-top: 1px solid #fff;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-	background-color: black;
+	background-color: var(--nav-bg);
 }
  .bg-img .overlay {
     position: absolute;

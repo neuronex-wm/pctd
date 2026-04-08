@@ -18,22 +18,28 @@
 
       gtag('config', 'UA-154856577-1');
     </script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
-    <!-- Bootstrap CSS - ADD THIS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Primate Cell Type Database</a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-pctd">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-diagram-3"></i> Primate Cell Type Database</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="ourTeam.html">Our Team</a>
           </li>
@@ -46,10 +52,6 @@
             </div>
           </li>
         </ul>
-        <form class="d-flex my-2 my-lg-0" action="search.html">
-          <input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </nav>
 	  <section id="home">
@@ -127,56 +129,26 @@
       </div>
     </section>
     
-    <hr>
-    <section>
-      
-    </section>
-		  
-    <hr>
-    <div class="section">
+    <footer class="site-footer text-center">
       <div class="container">
-        <div class="row">
-		
-          <div class="col-md-4 col-12 col-lg-7">
-            <h3 class="text-center">Contact Us</h3>
-            <address class="text-center">
-              <strong>Western University - Robarts Research Institute</strong><br>
-              1151 Richmond St. N., 
-              London, Ontario, Canada<br>
-            P: (519) 931-5777 F: (519) 931-5789<br>
-            </address>
-			  
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <strong>Western University</strong><br>
+            Robarts Research Institute<br>
+            1151 Richmond St. N., London, ON, Canada
           </div>
-          <div class="col-md-4 col-12">
-            
+          <div class="col-md-4 my-3 my-md-0">
+            <span>© JMT Lab 2020</span>
+            <span class="mx-1">·</span>
+            <a href="/citation.html">Citation Policy</a>
           </div>
-			  
-        </div>
-      </div>
-    </div>
-    <hr>
-		
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Copyright © JMT Lab 2020. All rights reserved.</p>
+          <div class="col-md-4">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; width: 50px;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+            <div style="font-size:0.7rem; margin-top:0.25rem;">CC BY-NC 4.0</div>
           </div>
         </div>
       </div>
     </footer>
-	<footer class="text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-6">
-					<a href="/citation.html" class="btn btn-outline-primary"> Please view Our Citation policy.</a>
-				</div>
-			    <div class="col-6">
-					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; width: 50px;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><div class="font-weight-lighter" style="font-size:10px">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
-				</div>  
-			</div>
-		</div>
-	</footer>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

@@ -7,17 +7,12 @@ test('ephysCT page loads and displays content', async ({ page }) => {
   await page.goto(`file://${filePath}`);
 
   // Check that the page has loaded by verifying the title
-  await expect(page).toHaveTitle(/ephys/i);
+  await expect(page).toHaveTitle(/primate/i);
 
   // Wait for any dynamic content to load
   await page.waitForLoadState('networkidle');
 
-  // Take an accessibility snapshot to view the page structure as AI would see it
-  const snapshot = await page.accessibility.snapshot();
-  
-  // Log the snapshot for inspection
-  console.log('Accessibility Snapshot:', JSON.stringify(snapshot, null, 2));
-
-  // Verify that key interactive elements are present
-  expect(snapshot).toBeTruthy();
+  // Verify that key elements are present
+  await expect(page.locator('nav')).toBeVisible();
+  await expect(page.locator('h2')).toContainText('Electrophysiology');
 });

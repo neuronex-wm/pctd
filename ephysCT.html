@@ -8,7 +8,11 @@
     <title>Primate Cell Type Database</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <!-- Bootstrap CSS - ADD THIS -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
@@ -24,74 +28,60 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.html">Primate Cell Type Database</a>
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-pctd">
+		<a class="navbar-brand" href="index.html"><i class="bi bi-diagram-3"></i> Primate Cell Type Database</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto">
-				<a class="nav-link" href="index.html">Home </a>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="ourTeam.html">Our Team</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
 						data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Data
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="#">Electrophysiology</a>
-						
-						
-						
 					</div>
 				</li>
 			</ul>
-			<form class="d-flex my-2 my-lg-0 ms-auto" action="search.html">
-				<input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search"
-					aria-label="Search">
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form>
 		</div>
 	</nav>
 
-
-	<!-- TITLE -->
-
-	<section>
-		<h2 class="text-center" id="pageTitle">Ex Vivo Data - Intracellular Electrophysiology&nbsp;</h2>
-		
-	</section>
-
-
-	<!-- DANDI ATTRIBUTION -->
-	<div class="px-3 pt-2 text-end">
-		<a href="https://dandiarchive.org/dandiset/001776?pos=1" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark">
-			<i class="bi bi-database"></i> Data hosted on DANDI Archive — Dandiset 001776
-		</a>
+	<!-- PAGE HEADER -->
+	<div class="page-header-bar">
+		<div class="container-fluid px-4">
+			<div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+				<div>
+					<h2>Ex Vivo Data &mdash; Intracellular Electrophysiology</h2>
+					<p class="header-subtitle mb-0">Patch clamp recordings from the NHP</p>
+				</div>
+				<a href="https://dandiarchive.org/dandiset/001776?pos=1" target="_blank" rel="noopener" class="dandi-badge">
+					<i class="bi bi-database"></i> Dandiset 001776
+				</a>
+			</div>
+			<div class="d-flex flex-wrap align-items-center gap-2 mt-3">
+				<div class="view-controls">
+					<button id="filterParallelBtn" class="btn-view" data-bs-toggle="collapse" data-bs-target="#combinedFilter" role="button"
+						aria-expanded="true" aria-controls="combinedFilter"><i class="bi bi-funnel"></i> Filter</button>
+					<button id="filterScatterBtn" class="btn-view" data-bs-toggle="collapse" data-bs-target="#Scatter2Filter" role="button"
+						aria-expanded="false" aria-controls="Scatter2Filter"><i class="bi bi-scatter-chart"></i> Scatter</button>
+					<button class="btn-view" type="button" data-bs-toggle="collapse" data-bs-target="#tableData"
+						aria-expanded="true" aria-controls="tableData"><i class="bi bi-table"></i> Table</button>
+				</div>
+				<a id="browseDandiBtn" href="https://dandiarchive.org/dandiset/001776" target="_blank" class="btn-browse-dandi ms-auto">
+					<i class="bi bi-box-arrow-up-right"></i> Browse on DANDI
+				</a>
+			</div>
+		</div>
 	</div>
-
-	<!-- AXN BUTTONS -->
-	<p>
-		<span id="Filter" class="text-left" style="display: relative">
-			<button id="filterParallelBtn" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#combinedFilter" role="button"
-				aria-expanded="true" aria-controls="combinedFilter">Filter</button>
-			<button id="filterScatterBtn" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#Scatter2Filter" role="button"
-				aria-expanded="false" aria-controls="Scatter2Filter">Filter - Scatter</button>
-			<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#tableData"
-				aria-expanded="true" aria-controls="tableData">Table</button>
-		</span>
-		<span id="downloadActions" class="text-right " style="display: relative">
-
-			<a id="browseDandiBtn" href="https://dandiarchive.org/dandiset/001776" target="_blank" class="btn btn-primary" alight="right">Browse Full Dataset on DANDI</a>
-		</span>
-
-	</p>
-
-	<br>
-
 
 	<!-- MAIN TABLE -->
 	<div class="collapse multi-collapse" id="Scatter2Filter">
@@ -219,53 +209,28 @@
 		</div>
 
 	</section>
-	<hr>
-	<div class="section">
+	<footer class="site-footer text-center">
 		<div class="container">
-			<div class="row">
-
-				<div class="col-md-4 col-12 col-lg-7">
-					<h3 class="text-center">GET IN TOUCH</h3>
-					<address class="text-center">
-						<strong>Western University - Robarts Research Institute</strong><br>
-						1151 Richmond St. N.,
-						London, Ontario, Canada<br>
-						P: (519) 931-5777 F: (519) 931-5789<br>
-					</address>
+			<div class="row align-items-center">
+				<div class="col-md-4">
+					<strong>Western University</strong><br>
+					Robarts Research Institute<br>
+					1151 Richmond St. N., London, ON, Canada
 				</div>
-
+				<div class="col-md-4 my-3 my-md-0">
+					<span>© JMT Lab 2020</span>
+					<span class="mx-1">·</span>
+					<a href="/citation.html">Citation Policy</a>
+				</div>
+				<div class="col-md-4">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+						<img alt="Creative Commons License" style="border-width:0; width: 50px;"
+							src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png">
+					</a>
+					<div style="font-size:0.7rem; margin-top:0.25rem;">CC BY-NC 4.0</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<hr>
-	<footer class="text-center">
-		<div class="container">
-			<div class="row" style="justify-content: center;">
-				<center>
-					<a>Copyright © JMT Lab 2020. All rights reserved.</a>
-				</center>
-			</div>
-			<br>
-
-		</div>
-	</footer>
-	<footer class="text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-6">
-					<a href="/citation.html" class="btn btn-outline-primary"> Please view Our Citation policy.</a>
-				</div>
-				<div class="col-6">
-					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
-							alt="Creative Commons License" style="border-width:0; width: 50px;"
-							src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />
-					<div class="font-weight-lighter" style="font-size:10px">This work is licensed under a <a
-							rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
-							Attribution-NonCommercial 4.0 International License</a>
-
-					</div>
-				</div>
-			</div>
 	</footer>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script

@@ -13,38 +13,38 @@
   gtag('config', 'UA-154856577-1');
 </script>
     <title>Primate Cell Type Database</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">Primate Cell Type Database</a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-pctd">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-diagram-3"></i> Primate Cell Type Database</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-			<li class="nav-item">
-				<a class="nav-link" href="ourTeam.html">Our Team</a>
-			 </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ourTeam.html">Our Team</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Data
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="ephysCT.html">Electrophysiology</a>
-              
-              
-              
             </div>
           </li>
         </ul>
-        <form class="d-flex my-2 my-lg-0 ms-auto" action="search.html">
-          <input class="form-control me-2" type="text" name="q" id="tipue_search_input" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </nav>
     <section>
@@ -121,15 +121,14 @@
         </div>
       </div>
     </div>
-    <hr>
-		
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Copyright © JMT Lab 2020. All rights reserved.</p>
-          </div>
-        </div>
+    <footer class="site-footer">
+      <div class="container text-center">
+        <p class="mb-1">&copy; JMT Lab 2020 &ndash; present. All rights reserved.</p>
+        <p class="mb-0" style="font-size:.75rem;">
+          <a href="/citation.html" class="text-decoration-none" style="color:var(--text-muted)">Citation Policy</a>
+          &nbsp;|&nbsp;
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" class="text-decoration-none" style="color:var(--text-muted)">CC BY-NC 4.0</a>
+        </p>
       </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
