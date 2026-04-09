@@ -832,6 +832,8 @@ border-top: 1px solid #fff;
     background-size: cover;
     background-attachment: fixed;
 	background-color: #000000;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 10px ), repeating-linear-gradient( #12143f55, #0d0e2d );
  
 }
  .bg-img .overlay {
