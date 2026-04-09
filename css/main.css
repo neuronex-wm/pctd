@@ -252,6 +252,7 @@ body {
   font-family: var(--font-family);
   font-weight: 700;
   text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  margin: 0.2rem 0;
 }
 
 #ephysLink {
@@ -830,7 +831,8 @@ border-top: 1px solid #fff;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-	background-color: var(--nav-bg);
+	background-color: #000000;
+ 
 }
  .bg-img .overlay {
     position: absolute;

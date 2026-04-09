@@ -5,6 +5,7 @@
 # expect a lot of weird names and hardcoded stuff, but it should work for the specific dataset structure.
 import glob
 import pandas as pd
+import numpy as np
 import json
 
 #set the column names which will converted back to the old naming conventions. This is just an example, you will need to adjust it based on the actual column names in your dataset.
@@ -39,12 +40,17 @@ OTHER_MAPPINGS = {
     "SomaLayerLoc": "Cortical layer"
 }
 
+flag_cells = ["9545510"] #these are the cells that we want to flag for some reason, maybe they are outliers or something.
+
 def map_dendritic_type(value):
     mapping = {
         'A': 'Aspiny',
         'S': 'Spiny',
     }
     return mapping.get(value, 'Unk.')
+
+
+
 
 
 def convert_conventions(df):
@@ -99,6 +105,15 @@ def convert_conventions(df):
     
     if "hasMorph" in df.columns:
         df = df.sort_values(by='hasMorph', ascending=False)
+
+    #flag certain cells
+    if flag_cells:
+        df['flagged'] = np.full(len(df), False)
+        df.loc[df['cellID'].astype(str).isin(flag_cells), 'flagged'] = True
+        #drop the flagged cells from the dataframe, but keep them in a separate dataframe for later use if needed
+        print(f"Flagging {df['flagged'].sum()} cells: {flag_cells}")
+        flagged_df = df[df['flagged'] == True]
+        df = df[df['flagged'] == False]
 
     return df
 
