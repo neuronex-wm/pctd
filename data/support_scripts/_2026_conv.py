@@ -40,7 +40,7 @@ OTHER_MAPPINGS = {
     "SomaLayerLoc": "Cortical layer"
 }
 
-flag_cells = ["9545510", "2224007"] #these are the cells that we want to flag for some reason, maybe they are outliers or something.
+flag_cells = ["9545510", "2224007", "6119309"] #these are the cells that we want to flag for some reason, maybe they are outliers or something.
 
 def map_dendritic_type(value):
     mapping = {
