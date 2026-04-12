@@ -73,8 +73,7 @@
         "UMAP1":5.7121378544,
         "UMAP2":9.1487953538,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M04_FP_A1_C05_Goettingen_NPI_Cell05",
@@ -150,8 +149,7 @@
         "UMAP1":5.7039874028,
         "UMAP2":9.3830035321,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M18_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -227,8 +225,7 @@
         "UMAP1":4.6074320245,
         "UMAP2":7.3972722362,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M08_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -304,8 +301,7 @@
         "UMAP1":4.5038676283,
         "UMAP2":8.4602788212,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A25_MM_A1_C02",
@@ -381,8 +377,7 @@
         "UMAP1":2.9609807153,
         "UMAP2":10.3778822315,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A10_MM_A1_C02",
@@ -458,8 +453,83 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
+    },
+    {
+        "internalID":"A12_SA_A1_C02",
+        "Resting potential":-69.93,
+        "Resistance":448.4,
+        "RinSS":290.6,
+        "Time Constant":15.31999969,
+        "Rheobase":70,
+        "sagVrest":-73.5,
+        "sag":13.67,
+        "sagRat":1.6,
+        "sagAmp":-90.0,
+        "hump":null,
+        "humpRat":null,
+        "humpAmp":null,
+        "HypRectDelay":0.58,
+        "DepRectDelay":null,
+        "HypRectInsta":0.88,
+        "DepRectInsta":null,
+        "AP halfwidth":0.32,
+        "peakLP":42.36,
+        "thresLP":-43.03,
+        "fTrghLP":-59.88,
+        "sTrghLP":-59.88,
+        "peakUpStrkLP":647.97,
+        "peakDwStrkLP":-290.19,
+        "peakStrkRatLP":-2.23,
+        "htTP_LP":85.39,
+        "lat":8.159999847,
+        "CurrentStepSP":-110.0,
+        "thresholdSP":-41.87011812,
+        "fastTroughSP":-62.10327287,
+        "slowTroughSP":-62.10327287,
+        "Amplitude":81.84814636,
+        "peakUpStrokeSP":651.557982,
+        "peakDownStrokeSP":-298.5425293,
+        "peakStrokeRatioSP":-2.182462858,
+        "latencySP":2.420000076,
+        "widthTP_SP":0.299999982,
+        "peakSP":39.97802824,
+        "rheoRt":34,
+        "lastQuisc":1.860000014,
+        "Median instantanous frequency":44.04999924,
+        "DFR_P90":73.36000061,
+        "DFR_P10":23.39999962,
+        "DFR_IQR":29.17000008,
+        "AdaRatB1B2":0.75,
+        "AdaRatB1BLast":1.0,
+        "fIslope":null,
+        "Max Firing Rate":42,
+        "cvISI":0.451000005,
+        "HeroRt":42,
+        "HeroAmp":110,
+        "heroLat":6.800000191,
+        "peakAda":-0.007023263,
+        "AdaIdx":-0.004967817,
+        "burst":0.522000015,
+        "TrghDiff":-12.78686552,
+        "TrghRatio":0.516315729,
+        "Temperature":32.3,
+        "iRa":11.6,
+        "BB":null,
+        "PyrID":null,
+        "cellID":6119309,
+        "Dendrite type":"Aspiny",
+        "Cortical layer":"2",
+        "ReporterTag":null,
+        "Cortical area":"PFC",
+        "Weight":0.42,
+        "Sex":"M",
+        "Age":"P3.39Y",
+        "Species":"Callithrix jacchus",
+        "UMAP1":2.7151570739,
+        "UMAP2":9.317196894,
+        "hasPlot":true,
+        "hasMorph":true
     },
     {
         "internalID":"M17_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -535,8 +605,7 @@
         "UMAP1":2.7094123895,
         "UMAP2":10.9009723167,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A13_MM_A5_C06",
@@ -612,8 +681,7 @@
         "UMAP1":5.4175211997,
         "UMAP2":11.0007503551,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A25_MM_A1_C06",
@@ -689,8 +757,7 @@
         "UMAP1":1.9625977257,
         "UMAP2":11.5146009661,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M08_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -766,8 +833,7 @@
         "UMAP1":2.9238195289,
         "UMAP2":8.8828404332,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A19_MM_A1_C01",
@@ -843,8 +909,7 @@
         "UMAP1":5.3147443948,
         "UMAP2":10.9738125313,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A09_SA_A1_C01",
@@ -920,8 +985,7 @@
         "UMAP1":3.8324411128,
         "UMAP2":11.3404762004,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M05_JR_A1_C02_Goettingen_NPI_Cell02",
@@ -997,8 +1061,7 @@
         "UMAP1":4.7015638245,
         "UMAP2":10.5220337426,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M02_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -1074,8 +1137,7 @@
         "UMAP1":5.0420284334,
         "UMAP2":7.6581748534,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M02_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -1151,8 +1213,7 @@
         "UMAP1":3.1457115418,
         "UMAP2":7.3078370192,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M13_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -1228,8 +1289,7 @@
         "UMAP1":4.0001064669,
         "UMAP2":8.0345039965,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M05_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -1305,8 +1365,7 @@
         "UMAP1":0.9195967172,
         "UMAP2":9.6887596876,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A23_MM_A1_C10",
@@ -1382,8 +1441,7 @@
         "UMAP1":5.0100194369,
         "UMAP2":10.9774469945,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A11_MM_A1_C09",
@@ -1459,8 +1517,7 @@
         "UMAP1":5.7903784284,
         "UMAP2":9.4232998487,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A23_MM_A1_C11",
@@ -1536,8 +1593,7 @@
         "UMAP1":2.8544955031,
         "UMAP2":11.0918334191,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A11_MM_A1_C14",
@@ -1613,8 +1669,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M03_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -1690,8 +1745,7 @@
         "UMAP1":5.3611149868,
         "UMAP2":10.729279603,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"A19_MM_A1_C08",
@@ -1767,8 +1821,7 @@
         "UMAP1":4.3066894677,
         "UMAP2":6.9810946591,
         "hasPlot":true,
-        "hasMorph":true,
-        "flagged":false
+        "hasMorph":true
     },
     {
         "internalID":"M26_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -1844,8 +1897,7 @@
         "UMAP1":3.5751643125,
         "UMAP2":8.4447168665,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C14_Goettingen_HEKA_Cell14",
@@ -1921,8 +1973,7 @@
         "UMAP1":3.6230640147,
         "UMAP2":11.8920535609,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -1998,8 +2049,7 @@
         "UMAP1":5.2206751724,
         "UMAP2":10.4332759158,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -2075,8 +2125,7 @@
         "UMAP1":2.3078060081,
         "UMAP2":8.9528079177,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -2152,8 +2201,7 @@
         "UMAP1":5.2611260639,
         "UMAP2":6.8772704279,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C03",
@@ -2229,8 +2277,7 @@
         "UMAP1":5.9734453981,
         "UMAP2":9.8750340589,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C12_Goettingen_HEKA_Cell12",
@@ -2306,8 +2353,7 @@
         "UMAP1":1.0163467318,
         "UMAP2":4.8531051517,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -2383,8 +2429,7 @@
         "UMAP1":5.0181948176,
         "UMAP2":7.0700698933,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C06_Goettingen_HEKA_Cell06",
@@ -2460,8 +2505,7 @@
         "UMAP1":5.5344337388,
         "UMAP2":9.1720813932,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_SO_A3_C08",
@@ -2537,8 +2581,7 @@
         "UMAP1":2.1252093441,
         "UMAP2":7.6790164783,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A11_MM_A1_C05",
@@ -2614,8 +2657,7 @@
         "UMAP1":0.3567625217,
         "UMAP2":7.9467866196,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C13",
@@ -2691,8 +2733,7 @@
         "UMAP1":5.58054013,
         "UMAP2":10.3930320548,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C06",
@@ -2768,8 +2809,7 @@
         "UMAP1":5.519996503,
         "UMAP2":8.9667306078,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C02",
@@ -2845,8 +2885,7 @@
         "UMAP1":1.8950225619,
         "UMAP2":6.4630290398,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A16_MM_A4_C04",
@@ -2922,8 +2961,7 @@
         "UMAP1":4.5303068239,
         "UMAP2":7.9867839079,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C07_Goettingen_HEKA_Cell07",
@@ -2999,8 +3037,7 @@
         "UMAP1":1.065823963,
         "UMAP2":12.5439617537,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -3076,8 +3113,7 @@
         "UMAP1":1.8124490586,
         "UMAP2":6.0200133991,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C01",
@@ -3153,8 +3189,7 @@
         "UMAP1":5.6133784999,
         "UMAP2":9.0885871021,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C11_Goettingen_HEKA_Cell11",
@@ -3230,8 +3265,7 @@
         "UMAP1":1.117385518,
         "UMAP2":4.9669188303,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C11",
@@ -3307,8 +3341,7 @@
         "UMAP1":4.7879739235,
         "UMAP2":6.7387624994,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -3384,8 +3417,7 @@
         "UMAP1":3.0118774149,
         "UMAP2":8.305999343,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_A2_C02",
@@ -3461,8 +3493,7 @@
         "UMAP1":5.092048076,
         "UMAP2":11.3423985949,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C17",
@@ -3538,8 +3569,7 @@
         "UMAP1":2.1405476141,
         "UMAP2":6.3737470647,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -3615,8 +3645,7 @@
         "UMAP1":2.8954021882,
         "UMAP2":8.6528865498,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -3692,8 +3721,7 @@
         "UMAP1":5.1957839009,
         "UMAP2":11.0383699457,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C08_Goettingen_HEKA_Cell08",
@@ -3769,8 +3797,7 @@
         "UMAP1":2.1068718406,
         "UMAP2":11.8888666201,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A11_MM_A1_C04",
@@ -3846,8 +3873,7 @@
         "UMAP1":4.8840481539,
         "UMAP2":11.4872987644,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A34_MM_A1_C01",
@@ -3923,8 +3949,7 @@
         "UMAP1":5.8519602324,
         "UMAP2":9.8615907148,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -4000,8 +4025,7 @@
         "UMAP1":3.2949146954,
         "UMAP2":7.6174982577,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_B1_C08",
@@ -4077,8 +4101,7 @@
         "UMAP1":1.7663959857,
         "UMAP2":5.4976642872,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -4154,8 +4177,7 @@
         "UMAP1":5.3141633657,
         "UMAP2":7.3701609179,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C06",
@@ -4231,8 +4253,7 @@
         "UMAP1":5.4906484247,
         "UMAP2":9.9233757868,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_MM_A3_C04",
@@ -4308,8 +4329,7 @@
         "UMAP1":5.8677843029,
         "UMAP2":9.2562496469,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -4385,8 +4405,7 @@
         "UMAP1":3.1236958793,
         "UMAP2":7.7172525886,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_MM_A2_C03",
@@ -4462,8 +4481,7 @@
         "UMAP1":4.4886379929,
         "UMAP2":6.7431796372,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_JR_A1_C09_Goettingen_NPI_Cell09",
@@ -4539,8 +4557,7 @@
         "UMAP1":0.1682976271,
         "UMAP2":7.7527181247,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C01",
@@ -4616,8 +4633,7 @@
         "UMAP1":4.3895567026,
         "UMAP2":7.5103694448,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -4693,8 +4709,7 @@
         "UMAP1":4.9422578181,
         "UMAP2":7.1505710223,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A25_MM_A1_C08",
@@ -4770,8 +4785,7 @@
         "UMAP1":6.0782335972,
         "UMAP2":9.8368357159,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_A1_C01",
@@ -4847,8 +4861,7 @@
         "UMAP1":4.8012632852,
         "UMAP2":10.9606760306,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_SA_A1_C03",
@@ -4924,8 +4937,7 @@
         "UMAP1":4.9009208726,
         "UMAP2":7.6623904458,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A18_MM_A1_C02",
@@ -5001,8 +5013,7 @@
         "UMAP1":5.1971907081,
         "UMAP2":11.1325905098,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_A6_C07",
@@ -5078,8 +5089,7 @@
         "UMAP1":5.5091183334,
         "UMAP2":10.8232593234,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -5155,8 +5165,7 @@
         "UMAP1":3.9826042675,
         "UMAP2":7.4943547569,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C02",
@@ -5232,8 +5241,7 @@
         "UMAP1":4.1755171019,
         "UMAP2":8.1150431529,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C04",
@@ -5309,8 +5317,7 @@
         "UMAP1":5.0760425988,
         "UMAP2":10.5351619396,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_A4_C05",
@@ -5386,8 +5393,7 @@
         "UMAP1":1.9351271177,
         "UMAP2":6.3118150221,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C08",
@@ -5463,8 +5469,7 @@
         "UMAP1":5.2962546746,
         "UMAP2":10.463710236,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -5540,8 +5545,7 @@
         "UMAP1":4.3655092795,
         "UMAP2":7.5394436354,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A5_C09",
@@ -5617,8 +5621,7 @@
         "UMAP1":5.5977895959,
         "UMAP2":9.771713228,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_A6_C07",
@@ -5694,8 +5697,7 @@
         "UMAP1":4.7793596139,
         "UMAP2":6.5330145939,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A5_C09",
@@ -5771,8 +5773,7 @@
         "UMAP1":4.8531131888,
         "UMAP2":10.7611325923,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -5848,8 +5849,7 @@
         "UMAP1":1.5601289416,
         "UMAP2":8.803976694,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -5925,8 +5925,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_SA_A1_C01",
@@ -6002,8 +6001,7 @@
         "UMAP1":5.6118207678,
         "UMAP2":9.0598796592,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -6079,8 +6077,7 @@
         "UMAP1":4.5514490257,
         "UMAP2":7.6681503366,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -6156,8 +6153,7 @@
         "UMAP1":5.3015218915,
         "UMAP2":10.9179537589,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A17_MM_A1_C07",
@@ -6233,8 +6229,7 @@
         "UMAP1":3.6665402399,
         "UMAP2":7.4168602768,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -6310,8 +6305,7 @@
         "UMAP1":5.0882960952,
         "UMAP2":6.9467682376,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C10",
@@ -6387,8 +6381,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_A1_C01",
@@ -6464,8 +6457,7 @@
         "UMAP1":5.6195308016,
         "UMAP2":10.4686896832,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_MM_A1_C09",
@@ -6541,8 +6533,7 @@
         "UMAP1":2.4725276747,
         "UMAP2":5.8827022649,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C03",
@@ -6618,8 +6609,7 @@
         "UMAP1":1.8435785787,
         "UMAP2":5.180471892,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -6695,8 +6685,7 @@
         "UMAP1":4.3445039653,
         "UMAP2":7.3776670417,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_B1_C08",
@@ -6772,8 +6761,7 @@
         "UMAP1":5.7770991403,
         "UMAP2":9.8721548016,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -6849,8 +6837,7 @@
         "UMAP1":5.6325274919,
         "UMAP2":9.7612301707,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C12",
@@ -6926,8 +6913,7 @@
         "UMAP1":5.7414571319,
         "UMAP2":9.1931075803,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -7003,8 +6989,7 @@
         "UMAP1":3.8368759993,
         "UMAP2":7.4173146149,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -7080,8 +7065,7 @@
         "UMAP1":5.1657698783,
         "UMAP2":11.0920004694,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_MM_A4_C07",
@@ -7157,8 +7141,7 @@
         "UMAP1":1.5858186735,
         "UMAP2":8.8459313182,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_SP_A1_C06_Goettingen_HEKA_Cell06",
@@ -7234,8 +7217,7 @@
         "UMAP1":4.699403997,
         "UMAP2":7.2981825208,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -7311,8 +7293,7 @@
         "UMAP1":5.617757154,
         "UMAP2":10.3819490153,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -7388,8 +7369,7 @@
         "UMAP1":3.5685106292,
         "UMAP2":6.644320999,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_A1_C01",
@@ -7465,8 +7445,7 @@
         "UMAP1":5.7140100396,
         "UMAP2":9.6355716474,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -7542,8 +7521,7 @@
         "UMAP1":2.9159513448,
         "UMAP2":8.6062505501,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C13",
@@ -7619,8 +7597,7 @@
         "UMAP1":5.6941816467,
         "UMAP2":9.51145302,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_A6_C06",
@@ -7696,8 +7673,7 @@
         "UMAP1":5.4852480668,
         "UMAP2":9.1622605189,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -7773,8 +7749,7 @@
         "UMAP1":4.7980069185,
         "UMAP2":6.9546236034,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -7850,8 +7825,7 @@
         "UMAP1":5.2130193931,
         "UMAP2":11.1119747851,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -7927,8 +7901,7 @@
         "UMAP1":1.7434404693,
         "UMAP2":4.7594612227,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -8004,8 +7977,7 @@
         "UMAP1":4.7906679086,
         "UMAP2":7.4176709363,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A22_SA_A1_C05",
@@ -8081,8 +8053,7 @@
         "UMAP1":2.4484191183,
         "UMAP2":5.9626491916,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C06_Goettingen_HEKA_Cell06",
@@ -8158,8 +8129,7 @@
         "UMAP1":1.1011256981,
         "UMAP2":11.3813865591,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_B2_C10",
@@ -8235,8 +8205,7 @@
         "UMAP1":2.6987964746,
         "UMAP2":9.450523568,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -8312,8 +8281,7 @@
         "UMAP1":5.9260809122,
         "UMAP2":9.4623662688,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C06",
@@ -8389,8 +8357,7 @@
         "UMAP1":4.3772942584,
         "UMAP2":6.9170603164,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_A3_C03",
@@ -8466,8 +8433,7 @@
         "UMAP1":4.0099088107,
         "UMAP2":6.8402926479,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_A4_C05",
@@ -8543,8 +8509,7 @@
         "UMAP1":5.5420401372,
         "UMAP2":10.8451176983,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_FP_A1_C04_Goettingen_HEKA_Cell04",
@@ -8620,8 +8585,7 @@
         "UMAP1":5.7391392584,
         "UMAP2":9.4674295634,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_MM_A6_C06",
@@ -8697,8 +8661,7 @@
         "UMAP1":5.5495317372,
         "UMAP2":8.8615342088,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_A1_C01",
@@ -8774,8 +8737,7 @@
         "UMAP1":5.5441572911,
         "UMAP2":10.1682601166,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A18_MM_A1_C06",
@@ -8851,8 +8813,7 @@
         "UMAP1":1.9385544138,
         "UMAP2":5.5861766735,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A11_MM_A1_C01",
@@ -8928,8 +8889,7 @@
         "UMAP1":5.2570800301,
         "UMAP2":11.1435997524,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A29_MM_A1_C02",
@@ -9005,8 +8965,7 @@
         "UMAP1":3.2556381047,
         "UMAP2":6.9199035136,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_A4_C04",
@@ -9082,8 +9041,7 @@
         "UMAP1":3.2142417607,
         "UMAP2":10.3972058348,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_B1_C07",
@@ -9159,8 +9117,7 @@
         "UMAP1":5.4562750043,
         "UMAP2":9.7681387574,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A17_MM_A1_C03",
@@ -9236,8 +9193,7 @@
         "UMAP1":5.3611685526,
         "UMAP2":9.5796262891,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -9313,8 +9269,7 @@
         "UMAP1":2.9370678349,
         "UMAP2":8.5246144208,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_FP_A1_C07_Goettingen_NPI_Cell07",
@@ -9390,8 +9345,7 @@
         "UMAP1":6.0402910203,
         "UMAP2":9.7319968881,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M04_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -9467,8 +9421,7 @@
         "UMAP1":4.9327628391,
         "UMAP2":10.1226392649,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C08",
@@ -9544,8 +9497,7 @@
         "UMAP1":3.1787084354,
         "UMAP2":8.0398517811,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -9621,8 +9573,7 @@
         "UMAP1":5.1108160515,
         "UMAP2":6.765944339,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_B3_C10",
@@ -9698,8 +9649,7 @@
         "UMAP1":5.5273966501,
         "UMAP2":10.9231667142,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_SO_A2_C03",
@@ -9775,8 +9725,7 @@
         "UMAP1":0.1051510854,
         "UMAP2":12.631295627,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_MM_A4_C05",
@@ -9852,8 +9801,7 @@
         "UMAP1":5.5934791086,
         "UMAP2":10.2084116949,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_MM_A5_C05",
@@ -9929,8 +9877,7 @@
         "UMAP1":4.1588205595,
         "UMAP2":6.8117977392,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -10006,8 +9953,7 @@
         "UMAP1":5.2378672786,
         "UMAP2":7.1196932837,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -10083,8 +10029,7 @@
         "UMAP1":5.3307856121,
         "UMAP2":10.1120034704,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_MM_A2_C02",
@@ -10160,8 +10105,7 @@
         "UMAP1":4.9827739577,
         "UMAP2":7.16795469,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C05_Goettingen_NPI_Cell05",
@@ -10237,8 +10181,7 @@
         "UMAP1":4.5454219388,
         "UMAP2":7.6080002094,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -10314,8 +10257,7 @@
         "UMAP1":4.3210596751,
         "UMAP2":6.8896551423,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_A3_C03",
@@ -10391,8 +10333,7 @@
         "UMAP1":1.9749212636,
         "UMAP2":5.7980716193,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M04_FP_A1_C06_Goettingen_NPI_Cell06",
@@ -10468,8 +10409,7 @@
         "UMAP1":5.2230648645,
         "UMAP2":10.6019282329,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C07_Goettingen_NPI_Cell07",
@@ -10545,8 +10485,7 @@
         "UMAP1":4.8913886631,
         "UMAP2":7.9640801246,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_MM_A3_C03",
@@ -10622,8 +10561,7 @@
         "UMAP1":5.0406353144,
         "UMAP2":7.3753568569,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -10699,8 +10637,7 @@
         "UMAP1":4.809383271,
         "UMAP2":7.4315668238,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C09_Goettingen_HEKA_Cell09",
@@ -10776,8 +10713,7 @@
         "UMAP1":1.3608468992,
         "UMAP2":5.7823553324,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A22_MM_A1_C01",
@@ -10853,8 +10789,7 @@
         "UMAP1":5.9430131395,
         "UMAP2":9.8187928391,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -10930,8 +10865,7 @@
         "UMAP1":4.865556936,
         "UMAP2":7.1704800511,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -11007,8 +10941,7 @@
         "UMAP1":5.23116851,
         "UMAP2":10.7155825324,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -11084,8 +11017,7 @@
         "UMAP1":5.0217718179,
         "UMAP2":7.2776782034,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M04_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -11161,8 +11093,7 @@
         "UMAP1":1.2984019283,
         "UMAP2":8.4862206185,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_A2_C02",
@@ -11238,8 +11169,7 @@
         "UMAP1":5.9098737423,
         "UMAP2":9.6560292553,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -11315,8 +11245,7 @@
         "UMAP1":3.8793051247,
         "UMAP2":7.5147389093,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -11392,8 +11321,7 @@
         "UMAP1":5.2987680093,
         "UMAP2":7.0994487624,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_A2_C03",
@@ -11469,8 +11397,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_B4_C11",
@@ -11546,8 +11473,7 @@
         "UMAP1":5.7321832753,
         "UMAP2":10.4514058041,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -11623,8 +11549,7 @@
         "UMAP1":4.1357154707,
         "UMAP2":7.9563588941,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C10",
@@ -11700,8 +11625,7 @@
         "UMAP1":3.0238766912,
         "UMAP2":9.1624634596,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A18_SA_A1_C01",
@@ -11777,8 +11701,7 @@
         "UMAP1":6.1805652367,
         "UMAP2":9.7500134576,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C04",
@@ -11854,8 +11777,7 @@
         "UMAP1":5.6852549296,
         "UMAP2":9.3732986235,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M04_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -11931,8 +11853,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A18_JS_A1_C03",
@@ -12008,8 +11929,7 @@
         "UMAP1":3.9166278099,
         "UMAP2":10.5740561685,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M04_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -12085,8 +12005,7 @@
         "UMAP1":5.6359667365,
         "UMAP2":10.4099047702,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C15_Goettingen_HEKA_Cell15",
@@ -12162,8 +12081,7 @@
         "UMAP1":0.2808359839,
         "UMAP2":12.8714752645,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_JR_A1_C07_Goettingen_NPI_Cell07",
@@ -12239,8 +12157,7 @@
         "UMAP1":3.7653675098,
         "UMAP2":11.6239627094,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C13",
@@ -12316,8 +12233,7 @@
         "UMAP1":5.330711012,
         "UMAP2":10.6831054768,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C10_Goettingen_HEKA_Cell10",
@@ -12393,8 +12309,7 @@
         "UMAP1":0.5849148297,
         "UMAP2":12.550534656,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -12470,8 +12385,7 @@
         "UMAP1":5.4010105247,
         "UMAP2":10.4280352811,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A27_MM_A1_C04",
@@ -12547,8 +12461,7 @@
         "UMAP1":3.4957373572,
         "UMAP2":10.0840955909,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -12624,8 +12537,7 @@
         "UMAP1":2.74671953,
         "UMAP2":7.932405716,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -12701,8 +12613,7 @@
         "UMAP1":2.1486014312,
         "UMAP2":8.0911880038,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -12778,8 +12689,7 @@
         "UMAP1":5.1011466223,
         "UMAP2":7.223281131,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_B2_C09",
@@ -12855,8 +12765,7 @@
         "UMAP1":5.7230943461,
         "UMAP2":10.5378945842,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M04_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -12932,8 +12841,7 @@
         "UMAP1":4.7592426232,
         "UMAP2":11.0327289616,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C07_Goettingen_HEKA_Cell07",
@@ -13009,8 +12917,7 @@
         "UMAP1":1.3137767909,
         "UMAP2":5.8180668799,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C16_Goettingen_HEKA_Cell16",
@@ -13086,8 +12993,7 @@
         "UMAP1":3.7835878677,
         "UMAP2":11.4451955065,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_A2_C03",
@@ -13163,8 +13069,7 @@
         "UMAP1":3.8218726995,
         "UMAP2":10.9038562715,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A27_MM_A1_C01",
@@ -13240,8 +13145,7 @@
         "UMAP1":6.1166805527,
         "UMAP2":9.6009717636,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_FP_A1_C02_Goettingen_HEKA_Cell02",
@@ -13317,8 +13221,7 @@
         "UMAP1":5.6735542041,
         "UMAP2":9.2795601754,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_MM_A1_C04",
@@ -13394,8 +13297,7 @@
         "UMAP1":2.8567476179,
         "UMAP2":6.9957209655,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_JR_A1_C04_Goettingen_NPI_Cell04",
@@ -13471,8 +13373,7 @@
         "UMAP1":1.5481782811,
         "UMAP2":5.7614259989,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C05_Goettingen_NPI_Cell05",
@@ -13548,8 +13449,7 @@
         "UMAP1":5.352023318,
         "UMAP2":9.8958631447,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C17_Goettingen_HEKA_Cell17",
@@ -13625,8 +13525,7 @@
         "UMAP1":4.417335886,
         "UMAP2":11.4379503641,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -13702,8 +13601,7 @@
         "UMAP1":2.5660179504,
         "UMAP2":8.4780167162,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C07_Goettingen_HEKA_Cell07",
@@ -13779,8 +13677,7 @@
         "UMAP1":5.308862932,
         "UMAP2":7.281010754,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_C1_C13",
@@ -13856,8 +13753,7 @@
         "UMAP1":5.1405082328,
         "UMAP2":11.2178848323,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A6_C10",
@@ -13933,8 +13829,7 @@
         "UMAP1":5.0282393078,
         "UMAP2":9.6719849413,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C11",
@@ -14010,8 +13905,7 @@
         "UMAP1":5.4594978692,
         "UMAP2":9.6298122864,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_MM_A1_C01",
@@ -14087,8 +13981,7 @@
         "UMAP1":4.9286367898,
         "UMAP2":6.6388105844,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -14164,8 +14057,7 @@
         "UMAP1":5.1404281835,
         "UMAP2":7.040116122,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M02_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -14241,8 +14133,7 @@
         "UMAP1":4.3761761376,
         "UMAP2":6.8137075454,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -14318,8 +14209,7 @@
         "UMAP1":1.9216490276,
         "UMAP2":6.5499095296,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -14395,8 +14285,7 @@
         "UMAP1":3.1483123957,
         "UMAP2":7.619503274,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -14472,8 +14361,7 @@
         "UMAP1":4.4366507948,
         "UMAP2":7.3272902629,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_SA_A1_C05",
@@ -14549,8 +14437,7 @@
         "UMAP1":3.4733282176,
         "UMAP2":9.9374251125,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A16_MM_A1_C01",
@@ -14626,8 +14513,7 @@
         "UMAP1":5.2266129818,
         "UMAP2":9.8380844436,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -14703,8 +14589,7 @@
         "UMAP1":5.5570033915,
         "UMAP2":9.4459045136,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_A4_C04",
@@ -14780,8 +14665,7 @@
         "UMAP1":1.9163327989,
         "UMAP2":5.7288941826,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C06_Goettingen_HEKA_Cell06",
@@ -14857,8 +14741,7 @@
         "UMAP1":5.4771549989,
         "UMAP2":9.4804114456,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_SA_B5_C01",
@@ -14934,8 +14817,7 @@
         "UMAP1":5.5405752049,
         "UMAP2":10.8466893441,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -15011,8 +14893,7 @@
         "UMAP1":4.7272566939,
         "UMAP2":6.56176098,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C08",
@@ -15088,8 +14969,7 @@
         "UMAP1":4.7972752902,
         "UMAP2":10.7468799098,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_VK_A1_C09_Goettingen_NPI_Cell09",
@@ -15165,8 +15045,7 @@
         "UMAP1":5.1306764991,
         "UMAP2":7.2118122175,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C07",
@@ -15242,8 +15121,7 @@
         "UMAP1":4.1664826954,
         "UMAP2":10.8466992056,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_VK_A1_C06_Goettingen_NPI_Cell06",
@@ -15319,8 +15197,7 @@
         "UMAP1":5.2977671336,
         "UMAP2":7.138662131,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A20_MM_A5_C05",
@@ -15396,8 +15273,7 @@
         "UMAP1":1.8765131412,
         "UMAP2":5.6206448535,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_SP_A1_C07_Goettingen_HEKA_Cell07",
@@ -15473,8 +15349,7 @@
         "UMAP1":4.6706993151,
         "UMAP2":6.9605344683,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -15550,8 +15425,7 @@
         "UMAP1":4.9685477025,
         "UMAP2":7.1616652914,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_MM_A1_C01",
@@ -15627,8 +15501,7 @@
         "UMAP1":4.937886482,
         "UMAP2":11.6411356142,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_A3_C04",
@@ -15704,8 +15577,7 @@
         "UMAP1":5.2585138554,
         "UMAP2":11.4898441533,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_MM_A1_C03",
@@ -15781,8 +15653,7 @@
         "UMAP1":3.6537884962,
         "UMAP2":7.979313347,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -15858,8 +15729,7 @@
         "UMAP1":2.0861284009,
         "UMAP2":5.9825429235,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_SP_A1_C06_Goettingen_HEKA_Cell06",
@@ -15935,8 +15805,7 @@
         "UMAP1":4.909957101,
         "UMAP2":6.7340361564,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C05",
@@ -16012,8 +15881,7 @@
         "UMAP1":1.9838267363,
         "UMAP2":6.0959455603,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_VK_A1_C07_Goettingen_NPI_Cell07",
@@ -16089,8 +15957,7 @@
         "UMAP1":3.2574452472,
         "UMAP2":7.2746031858,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -16166,8 +16033,7 @@
         "UMAP1":5.8504147319,
         "UMAP2":9.9385374704,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -16243,8 +16109,7 @@
         "UMAP1":5.59933739,
         "UMAP2":10.1200676986,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M12_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -16320,8 +16185,7 @@
         "UMAP1":2.5981705613,
         "UMAP2":7.2665908463,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -16397,8 +16261,7 @@
         "UMAP1":5.0831829319,
         "UMAP2":9.6394760075,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_FP_A1_C01_Goettingen_HEKA_Cell01",
@@ -16474,8 +16337,7 @@
         "UMAP1":5.4731081662,
         "UMAP2":8.9891770464,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C01_Goettingen_HEKA_Cell01",
@@ -16551,8 +16413,7 @@
         "UMAP1":5.9625753073,
         "UMAP2":9.7138983449,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -16628,8 +16489,7 @@
         "UMAP1":0.356614892,
         "UMAP2":9.102900452,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -16705,8 +16565,7 @@
         "UMAP1":4.0731218873,
         "UMAP2":8.1210179694,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A3_C05",
@@ -16782,8 +16641,7 @@
         "UMAP1":4.5273883816,
         "UMAP2":7.6217925393,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -16859,8 +16717,7 @@
         "UMAP1":5.1746166504,
         "UMAP2":7.2839443613,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A25_MM_A1_C04",
@@ -16936,8 +16793,7 @@
         "UMAP1":5.2437614751,
         "UMAP2":9.6757367473,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -17013,8 +16869,7 @@
         "UMAP1":4.2195134107,
         "UMAP2":7.5186990822,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C04_Goettingen_HEKA_Cell04",
@@ -17090,8 +16945,7 @@
         "UMAP1":5.841118862,
         "UMAP2":9.7590011119,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A34_SO_A1_C01",
@@ -17167,8 +17021,7 @@
         "UMAP1":5.8549397054,
         "UMAP2":9.464599591,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_FP_A1_C05_Goettingen_HEKA_Cell05",
@@ -17244,8 +17097,7 @@
         "UMAP1":3.709379748,
         "UMAP2":7.9331833566,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -17321,8 +17173,7 @@
         "UMAP1":3.4728533386,
         "UMAP2":7.9141734085,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_SO_A1_C02",
@@ -17398,8 +17249,7 @@
         "UMAP1":0.800235446,
         "UMAP2":9.3880318243,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_MM_A1_C05",
@@ -17475,8 +17325,7 @@
         "UMAP1":3.2847917857,
         "UMAP2":8.4117656881,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_FP_A1_C03_Goettingen_HEKA_Cell03",
@@ -17552,8 +17401,7 @@
         "UMAP1":4.5279802541,
         "UMAP2":7.408093434,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_MM_A1_C04",
@@ -17629,8 +17477,7 @@
         "UMAP1":5.0741038036,
         "UMAP2":8.1656899632,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -17706,8 +17553,7 @@
         "UMAP1":2.1779985279,
         "UMAP2":6.5787314245,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -17783,8 +17629,7 @@
         "UMAP1":4.1999368607,
         "UMAP2":7.5400534454,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -17860,8 +17705,7 @@
         "UMAP1":5.6651617499,
         "UMAP2":9.9858337266,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A29_MM_A1_C03",
@@ -17937,8 +17781,7 @@
         "UMAP1":5.1409306374,
         "UMAP2":7.0426057124,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -18014,8 +17857,7 @@
         "UMAP1":4.8911128411,
         "UMAP2":6.5732589478,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A22_MM_A1_C02",
@@ -18091,8 +17933,7 @@
         "UMAP1":5.8969100699,
         "UMAP2":9.9373942182,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C12",
@@ -18168,8 +18009,7 @@
         "UMAP1":4.6541398258,
         "UMAP2":8.1029195601,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_MM_A2_C02",
@@ -18245,8 +18085,7 @@
         "UMAP1":5.6189694017,
         "UMAP2":9.6396300618,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -18322,8 +18161,7 @@
         "UMAP1":3.7495690565,
         "UMAP2":9.1049727252,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A2_C03",
@@ -18399,8 +18237,7 @@
         "UMAP1":5.148542667,
         "UMAP2":7.0261687964,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_FP_A1_C07_Goettingen_HEKA_Cell07",
@@ -18476,8 +18313,7 @@
         "UMAP1":5.6355116365,
         "UMAP2":9.8938885285,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C05",
@@ -18553,8 +18389,7 @@
         "UMAP1":4.2731013881,
         "UMAP2":7.4360444161,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A15_MM_B3_C11",
@@ -18630,8 +18465,7 @@
         "UMAP1":4.9250921044,
         "UMAP2":10.31013849,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -18707,8 +18541,7 @@
         "UMAP1":4.750299923,
         "UMAP2":6.8800067005,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -18784,8 +18617,7 @@
         "UMAP1":4.7195559582,
         "UMAP2":7.0599751524,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C07_Goettingen_HEKA_Cell07",
@@ -18861,8 +18693,7 @@
         "UMAP1":5.4819333112,
         "UMAP2":8.9643825912,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C18_Goettingen_HEKA_Cell18",
@@ -18938,8 +18769,7 @@
         "UMAP1":1.7576901391,
         "UMAP2":6.5229091767,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_JR_A1_C02_Goettingen_NPI_Cell02",
@@ -19015,8 +18845,7 @@
         "UMAP1":4.2309042597,
         "UMAP2":7.4768217816,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A11_MM_A1_C02",
@@ -19092,8 +18921,7 @@
         "UMAP1":5.1357634214,
         "UMAP2":11.3097783861,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_SP_A1_C06_Goettingen_HEKA_Cell06",
@@ -19169,8 +18997,7 @@
         "UMAP1":5.0980694364,
         "UMAP2":7.2580460563,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C05_Goettingen_HEKA_Cell05",
@@ -19246,8 +19073,7 @@
         "UMAP1":5.8620683595,
         "UMAP2":9.9978134329,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C08_Goettingen_HEKA_Cell08",
@@ -19323,8 +19149,7 @@
         "UMAP1":1.8402722459,
         "UMAP2":5.1619079956,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -19400,8 +19225,7 @@
         "UMAP1":2.5105732907,
         "UMAP2":8.0001192326,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A13_MM_A3_C04",
@@ -19477,8 +19301,7 @@
         "UMAP1":5.2275087537,
         "UMAP2":11.2837475023,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -19554,8 +19377,7 @@
         "UMAP1":5.1699800848,
         "UMAP2":7.1666257403,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_FP_A1_C05_Goettingen_NPI_Cell05",
@@ -19631,8 +19453,7 @@
         "UMAP1":4.750677339,
         "UMAP2":7.257928501,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_MM_A1_C01",
@@ -19708,8 +19529,7 @@
         "UMAP1":3.9664982126,
         "UMAP2":7.4456426418,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C08_Goettingen_NPI_Cell08",
@@ -19785,8 +19605,7 @@
         "UMAP1":2.6458078333,
         "UMAP2":12.1296896624,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C08_Goettingen_NPI_Cell08",
@@ -19862,8 +19681,7 @@
         "UMAP1":4.6743410618,
         "UMAP2":7.588223618,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -19939,8 +19757,7 @@
         "UMAP1":0.7540655017,
         "UMAP2":8.5703048365,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -20016,8 +19833,7 @@
         "UMAP1":2.2419898369,
         "UMAP2":11.9602512604,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -20093,8 +19909,7 @@
         "UMAP1":4.9128643118,
         "UMAP2":7.045773249,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -20170,8 +19985,7 @@
         "UMAP1":5.1530815442,
         "UMAP2":7.2462104515,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -20247,8 +20061,7 @@
         "UMAP1":5.7959049021,
         "UMAP2":9.9420552303,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -20324,8 +20137,7 @@
         "UMAP1":4.3212967384,
         "UMAP2":8.3235317725,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_JR_A1_C08_Goettingen_NPI_Cell08",
@@ -20401,8 +20213,7 @@
         "UMAP1":4.7674075499,
         "UMAP2":8.7877760949,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -20478,8 +20289,7 @@
         "UMAP1":5.239766585,
         "UMAP2":6.9731349129,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_JR_A1_C06_Goettingen_NPI_Cell06",
@@ -20555,8 +20365,7 @@
         "UMAP1":4.316492308,
         "UMAP2":7.532996019,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C07",
@@ -20632,8 +20441,7 @@
         "UMAP1":5.9187472626,
         "UMAP2":9.6484716891,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_MM_A1_C04",
@@ -20709,8 +20517,7 @@
         "UMAP1":1.978518908,
         "UMAP2":5.9135973575,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C06_Goettingen_NPI_Cell06",
@@ -20786,8 +20593,7 @@
         "UMAP1":4.769000905,
         "UMAP2":7.7907203798,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A1_C03",
@@ -20863,8 +20669,7 @@
         "UMAP1":3.4788741023,
         "UMAP2":6.9520591685,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -20940,8 +20745,7 @@
         "UMAP1":5.9812482317,
         "UMAP2":9.6513608485,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_SA_A1_C04",
@@ -21017,8 +20821,7 @@
         "UMAP1":5.2862193848,
         "UMAP2":7.0502064553,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A4_C08",
@@ -21094,8 +20897,7 @@
         "UMAP1":4.4154290219,
         "UMAP2":11.2117988329,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -21171,8 +20973,7 @@
         "UMAP1":5.0418087707,
         "UMAP2":11.4922257423,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -21248,8 +21049,7 @@
         "UMAP1":3.6930276819,
         "UMAP2":7.2659138901,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_SO_A2_C07",
@@ -21325,8 +21125,7 @@
         "UMAP1":4.8995520259,
         "UMAP2":7.6417606704,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -21402,8 +21201,7 @@
         "UMAP1":5.6858696232,
         "UMAP2":9.846702305,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -21479,8 +21277,7 @@
         "UMAP1":1.9123733856,
         "UMAP2":5.3346308532,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_FP_A1_C06_Goettingen_NPI_Cell06",
@@ -21556,8 +21353,7 @@
         "UMAP1":5.2362149865,
         "UMAP2":7.1419071014,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -21633,8 +21429,7 @@
         "UMAP1":4.2937587921,
         "UMAP2":6.963837926,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -21710,8 +21505,7 @@
         "UMAP1":1.8284325752,
         "UMAP2":5.8999106521,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -21787,8 +21581,7 @@
         "UMAP1":5.2250957355,
         "UMAP2":10.6932350866,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -21864,8 +21657,7 @@
         "UMAP1":5.2040774183,
         "UMAP2":7.148531814,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_B1_C08",
@@ -21941,8 +21733,7 @@
         "UMAP1":5.009146346,
         "UMAP2":6.8235055889,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_VK_A1_C08_Goettingen_NPI_Cell08",
@@ -22018,8 +21809,7 @@
         "UMAP1":5.2196151837,
         "UMAP2":7.3131061001,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_SO_A3_C05",
@@ -22095,8 +21885,7 @@
         "UMAP1":0.9448878819,
         "UMAP2":5.0226769687,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A5_C08",
@@ -22172,8 +21961,7 @@
         "UMAP1":1.3085222051,
         "UMAP2":6.3768482267,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_SP_A1_C06_Goettingen_HEKA_Cell06",
@@ -22249,8 +22037,7 @@
         "UMAP1":5.1937131342,
         "UMAP2":7.0962431562,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -22326,8 +22113,7 @@
         "UMAP1":2.5880719749,
         "UMAP2":9.2157090469,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C07_Goettingen_NPI_Cell07",
@@ -22403,8 +22189,7 @@
         "UMAP1":3.2128724151,
         "UMAP2":10.8000325275,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -22480,8 +22265,7 @@
         "UMAP1":4.5810945655,
         "UMAP2":6.8331127945,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_MM_A3_C03",
@@ -22557,8 +22341,7 @@
         "UMAP1":5.151761113,
         "UMAP2":7.1812741993,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -22634,8 +22417,7 @@
         "UMAP1":2.4588926803,
         "UMAP2":9.0794859029,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -22711,8 +22493,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_JR_A1_C02_Goettingen_NPI_Cell02",
@@ -22788,8 +22569,7 @@
         "UMAP1":2.6447968102,
         "UMAP2":7.9134617456,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -22865,8 +22645,7 @@
         "UMAP1":1.021917972,
         "UMAP2":9.1097108074,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_VK_A1_C03_Goettingen_NPI_Cell03",
@@ -22942,8 +22721,7 @@
         "UMAP1":2.5087493166,
         "UMAP2":8.4078769162,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M02_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -23019,8 +22797,7 @@
         "UMAP1":1.0198885072,
         "UMAP2":8.7715826827,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -23096,8 +22873,7 @@
         "UMAP1":1.7825195526,
         "UMAP2":5.9822438347,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -23173,8 +22949,7 @@
         "UMAP1":4.7593560497,
         "UMAP2":6.6322662748,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -23250,8 +23025,7 @@
         "UMAP1":5.0395466544,
         "UMAP2":10.6158647022,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_VK_A1_C10_Goettingen_NPI_Cell10",
@@ -23327,8 +23101,7 @@
         "UMAP1":4.9705981266,
         "UMAP2":10.0690324985,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -23404,8 +23177,7 @@
         "UMAP1":5.1903139146,
         "UMAP2":7.4289610444,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -23481,8 +23253,7 @@
         "UMAP1":3.1784976465,
         "UMAP2":7.5019180613,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -23558,8 +23329,7 @@
         "UMAP1":4.9075276013,
         "UMAP2":6.5796409357,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -23635,8 +23405,7 @@
         "UMAP1":4.8182970153,
         "UMAP2":6.5443991915,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -23712,8 +23481,7 @@
         "UMAP1":4.1191256603,
         "UMAP2":7.1687528763,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_MM_A1_C01",
@@ -23789,8 +23557,7 @@
         "UMAP1":1.7680643298,
         "UMAP2":9.7839612901,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -23866,8 +23633,7 @@
         "UMAP1":2.0647671767,
         "UMAP2":8.8110549197,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_B4_C12",
@@ -23943,8 +23709,7 @@
         "UMAP1":5.6414987054,
         "UMAP2":10.7252586222,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -24020,8 +23785,7 @@
         "UMAP1":4.0272600624,
         "UMAP2":10.7941528229,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_SO_A2_C06",
@@ -24097,8 +23861,7 @@
         "UMAP1":5.479350161,
         "UMAP2":10.5465735426,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C13_Goettingen_HEKA_Cell13",
@@ -24174,8 +23937,7 @@
         "UMAP1":2.3807447958,
         "UMAP2":12.0141145715,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A4_C07",
@@ -24251,8 +24013,7 @@
         "UMAP1":4.8145538088,
         "UMAP2":7.6209951453,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -24328,8 +24089,7 @@
         "UMAP1":2.8665252107,
         "UMAP2":7.9411453004,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -24405,8 +24165,7 @@
         "UMAP1":2.3850700032,
         "UMAP2":9.9220494947,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -24482,8 +24241,7 @@
         "UMAP1":3.0638581206,
         "UMAP2":8.0094590736,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_VK_A1_C03_Goettingen_NPI_Cell03",
@@ -24559,8 +24317,7 @@
         "UMAP1":2.7994983832,
         "UMAP2":8.963923405,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -24636,8 +24393,7 @@
         "UMAP1":3.4362921388,
         "UMAP2":10.1099686403,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -24713,8 +24469,7 @@
         "UMAP1":5.0748848328,
         "UMAP2":10.2534392341,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C04_Goettingen_NPI_Cell04",
@@ -24790,8 +24545,7 @@
         "UMAP1":4.4339778328,
         "UMAP2":6.7879618858,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -24867,8 +24621,7 @@
         "UMAP1":4.3481684224,
         "UMAP2":7.4845337098,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C06_Goettingen_NPI_Cell06",
@@ -24944,8 +24697,7 @@
         "UMAP1":5.2717095684,
         "UMAP2":7.1291934958,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_VK_A1_C03_Goettingen_NPI_Cell03",
@@ -25021,8 +24773,7 @@
         "UMAP1":3.4550625913,
         "UMAP2":11.7981136992,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C04_Goettingen_NPI_Cell04",
@@ -25098,8 +24849,7 @@
         "UMAP1":3.90151174,
         "UMAP2":7.6202776069,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C10_Goettingen_NPI_Cell10",
@@ -25175,8 +24925,7 @@
         "UMAP1":2.5499918555,
         "UMAP2":9.3195607139,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -25252,8 +25001,7 @@
         "UMAP1":5.1209378244,
         "UMAP2":7.1546779599,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -25329,8 +25077,7 @@
         "UMAP1":5.2975303607,
         "UMAP2":10.2248043188,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_JR_A1_C02_Goettingen_NPI_Cell02",
@@ -25406,8 +25153,7 @@
         "UMAP1":5.6577156423,
         "UMAP2":9.9023040495,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -25483,8 +25229,7 @@
         "UMAP1":5.89995666,
         "UMAP2":9.2951897913,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -25560,8 +25305,7 @@
         "UMAP1":5.4749007072,
         "UMAP2":10.2803316136,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_VK_A1_C08_Goettingen_NPI_Cell08",
@@ -25637,8 +25381,7 @@
         "UMAP1":3.4377005468,
         "UMAP2":8.9501068873,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -25714,8 +25457,7 @@
         "UMAP1":4.5293424019,
         "UMAP2":8.4070137222,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -25791,8 +25533,7 @@
         "UMAP1":0.1726479643,
         "UMAP2":12.2802349853,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_VK_A1_C05_Goettingen_NPI_Cell05",
@@ -25868,8 +25609,7 @@
         "UMAP1":5.8039767418,
         "UMAP2":9.5445099359,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_JR_A1_C04_Goettingen_NPI_Cell04",
@@ -25945,8 +25685,7 @@
         "UMAP1":2.6209573883,
         "UMAP2":8.2899155211,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -26022,8 +25761,7 @@
         "UMAP1":6.0536063583,
         "UMAP2":9.7358042995,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_SO_A2_C04",
@@ -26099,8 +25837,7 @@
         "UMAP1":5.8721712227,
         "UMAP2":10.1126529965,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_SA_A1_C02",
@@ -26176,8 +25913,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -26253,8 +25989,7 @@
         "UMAP1":3.8164344609,
         "UMAP2":7.6729665564,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -26330,8 +26065,7 @@
         "UMAP1":5.1723060891,
         "UMAP2":6.9961532756,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A33_SO_A1_C03",
@@ -26407,8 +26141,7 @@
         "UMAP1":5.1435464303,
         "UMAP2":9.4580264771,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A3_C06",
@@ -26484,8 +26217,7 @@
         "UMAP1":4.6660471452,
         "UMAP2":7.5878061242,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_JR_A1_C11_Goettingen_NPI_Cell11",
@@ -26561,8 +26293,7 @@
         "UMAP1":4.8482284843,
         "UMAP2":7.7625337747,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -26638,8 +26369,7 @@
         "UMAP1":4.6581227595,
         "UMAP2":7.3112277702,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C08_Goettingen_NPI_Cell08",
@@ -26715,8 +26445,7 @@
         "UMAP1":3.8001985078,
         "UMAP2":7.8346722815,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -26792,8 +26521,7 @@
         "UMAP1":5.1707019334,
         "UMAP2":7.4672485569,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -26869,8 +26597,7 @@
         "UMAP1":4.2985132915,
         "UMAP2":7.4693364973,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C09_Goettingen_NPI_Cell09",
@@ -26946,8 +26673,7 @@
         "UMAP1":5.3349055808,
         "UMAP2":11.0836487902,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_VK_A1_C06_Goettingen_NPI_Cell06",
@@ -27023,8 +26749,7 @@
         "UMAP1":3.9525757975,
         "UMAP2":8.1586270843,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_JR_A1_C07_Goettingen_NPI_Cell07",
@@ -27100,8 +26825,7 @@
         "UMAP1":2.8577691253,
         "UMAP2":8.470388072,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_MM_A1_C02",
@@ -27177,8 +26901,7 @@
         "UMAP1":3.1459132117,
         "UMAP2":6.9097381733,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -27254,8 +26977,7 @@
         "UMAP1":5.3101228731,
         "UMAP2":10.1507914185,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -27331,8 +27053,7 @@
         "UMAP1":4.8985994606,
         "UMAP2":7.2531971669,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -27408,8 +27129,7 @@
         "UMAP1":0.0064346501,
         "UMAP2":7.4870601687,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_JR_A1_C12_Goettingen_NPI_Cell12",
@@ -27485,8 +27205,7 @@
         "UMAP1":4.9684166304,
         "UMAP2":7.2621019919,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A34_SO_A2_C02",
@@ -27562,8 +27281,7 @@
         "UMAP1":5.5775626824,
         "UMAP2":10.0707599709,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_VK_A1_C04_Goettingen_NPI_Cell04",
@@ -27639,8 +27357,7 @@
         "UMAP1":4.9321607363,
         "UMAP2":7.3734143309,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_VK_A1_C05_Goettingen_NPI_Cell05",
@@ -27716,8 +27433,7 @@
         "UMAP1":4.8005275443,
         "UMAP2":7.2586307216,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -27793,8 +27509,7 @@
         "UMAP1":1.1057316162,
         "UMAP2":12.1447273389,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -27870,8 +27585,7 @@
         "UMAP1":2.2888102703,
         "UMAP2":5.3554315151,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_JR_A1_C14_Goettingen_NPI_Cell14",
@@ -27947,8 +27661,7 @@
         "UMAP1":4.6234010883,
         "UMAP2":6.9018249341,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M14_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -28024,8 +27737,7 @@
         "UMAP1":4.1254274115,
         "UMAP2":7.54330019,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_SP_A1_C05_Goettingen_HEKA_Cell05",
@@ -28101,8 +27813,7 @@
         "UMAP1":4.4598152899,
         "UMAP2":7.502091021,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_FP_A1_C04_Goettingen_NPI_Cell04",
@@ -28178,8 +27889,7 @@
         "UMAP1":5.2992620702,
         "UMAP2":10.2791365038,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_MM_A1_C06",
@@ -28255,8 +27965,7 @@
         "UMAP1":1.8244739869,
         "UMAP2":5.570750884,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_SA_A1_C03",
@@ -28332,8 +28041,7 @@
         "UMAP1":5.8578987195,
         "UMAP2":9.9491064562,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A2_C04",
@@ -28409,8 +28117,7 @@
         "UMAP1":2.7596373277,
         "UMAP2":10.8698403477,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_JS_XX_C10",
@@ -28486,8 +28193,7 @@
         "UMAP1":4.5345019305,
         "UMAP2":7.7594250371,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M22_VK_A1_C07_Goettingen_NPI_Cell07",
@@ -28563,8 +28269,7 @@
         "UMAP1":4.2188005445,
         "UMAP2":7.7806245776,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JR_A1_C02_Goettingen_NPI_Cell02",
@@ -28640,8 +28345,7 @@
         "UMAP1":2.9964575895,
         "UMAP2":9.7879193424,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_VK_A1_C04_Goettingen_NPI_Cell04",
@@ -28717,8 +28421,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C09_Goettingen_NPI_Cell09",
@@ -28794,8 +28497,7 @@
         "UMAP1":4.7183184,
         "UMAP2":10.6068689572,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M09_JR_A1_C09_Goettingen_NPI_Cell09",
@@ -28871,8 +28573,7 @@
         "UMAP1":4.2290537748,
         "UMAP2":6.9183781189,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -28948,8 +28649,7 @@
         "UMAP1":5.1097412557,
         "UMAP2":7.114198242,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_VK_A1_C04_Goettingen_NPI_Cell04",
@@ -29025,8 +28725,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_VK_A1_C03_Goettingen_NPI_Cell03",
@@ -29102,8 +28801,7 @@
         "UMAP1":5.4814618506,
         "UMAP2":8.5403027527,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_FP_A1_C01_Goettingen_NPI_Cell01",
@@ -29179,8 +28877,7 @@
         "UMAP1":5.2581116068,
         "UMAP2":6.9689255469,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_MM_A1_C03",
@@ -29256,8 +28953,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -29333,8 +29029,7 @@
         "UMAP1":3.7882316295,
         "UMAP2":8.4385353217,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_FP_A1_C03_Goettingen_NPI_Cell03",
@@ -29410,8 +29105,7 @@
         "UMAP1":4.990799571,
         "UMAP2":7.308773778,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A1_C01",
@@ -29487,8 +29181,7 @@
         "UMAP1":1.0858115901,
         "UMAP2":8.8687473825,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_SO_A3_C09",
@@ -29564,8 +29257,7 @@
         "UMAP1":5.2763045045,
         "UMAP2":10.4748002839,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M15_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -29641,8 +29333,7 @@
         "UMAP1":2.8943058295,
         "UMAP2":6.6332020607,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M13_JR_A1_C04_Goettingen_NPI_Cell04",
@@ -29718,8 +29409,7 @@
         "UMAP1":5.1362652554,
         "UMAP2":7.0071395216,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_FP_A1_C02_Goettingen_NPI_Cell02",
@@ -29795,8 +29485,7 @@
         "UMAP1":5.3063782924,
         "UMAP2":10.630961995,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_JR_A1_C05_Goettingen_NPI_Cell05",
@@ -29872,8 +29561,7 @@
         "UMAP1":2.2011249689,
         "UMAP2":6.3355997011,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_MM_A1_C01",
@@ -29949,8 +29637,7 @@
         "UMAP1":4.9400816358,
         "UMAP2":12.153957194,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A09_MM_A1_C08",
@@ -30026,8 +29713,7 @@
         "UMAP1":4.5973185337,
         "UMAP2":11.1965571069,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A10_MM_A1_C04",
@@ -30103,8 +29789,7 @@
         "UMAP1":2.607406577,
         "UMAP2":6.5858374458,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A11_MM_A1_C11",
@@ -30180,8 +29865,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_MM_A1_C05",
@@ -30257,8 +29941,7 @@
         "UMAP1":5.3150970547,
         "UMAP2":10.5159107848,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_JS_A1_C07",
@@ -30334,8 +30017,7 @@
         "UMAP1":1.8210510173,
         "UMAP2":10.0977311951,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -30411,8 +30093,7 @@
         "UMAP1":5.0219876539,
         "UMAP2":11.0480339146,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C03",
@@ -30488,8 +30169,7 @@
         "UMAP1":3.5575404996,
         "UMAP2":10.7483204159,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_SO_A1_C01",
@@ -30565,8 +30245,7 @@
         "UMAP1":5.2059930189,
         "UMAP2":9.9425228151,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_MM_A3_C05",
@@ -30642,8 +30321,7 @@
         "UMAP1":4.114023975,
         "UMAP2":10.6232180742,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_VK_A1_C04_Goettingen_NPI_Cell04",
@@ -30719,8 +30397,7 @@
         "UMAP1":4.5601110422,
         "UMAP2":7.401959708,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C07_Goettingen_NPI_Cell07",
@@ -30796,8 +30473,7 @@
         "UMAP1":0.9900404022,
         "UMAP2":9.0368670887,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A14_MM_B3_C10",
@@ -30873,8 +30549,7 @@
         "UMAP1":5.5797997053,
         "UMAP2":10.8480066307,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A16_MM_A3_C03",
@@ -30950,8 +30625,7 @@
         "UMAP1":1.8190811234,
         "UMAP2":5.8708058268,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A17_MM_A1_C01",
@@ -31027,8 +30701,7 @@
         "UMAP1":2.0908344163,
         "UMAP2":9.5116331822,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A17_MM_A1_C02",
@@ -31104,8 +30777,7 @@
         "UMAP1":3.3635500619,
         "UMAP2":10.5652032226,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A17_MM_A1_C04",
@@ -31181,8 +30853,7 @@
         "UMAP1":5.5201247372,
         "UMAP2":9.7149530917,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A17_MM_A1_C06",
@@ -31258,8 +30929,7 @@
         "UMAP1":5.3235021112,
         "UMAP2":9.3810387355,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A18_MM_A1_C01",
@@ -31335,8 +31005,7 @@
         "UMAP1":3.1072720206,
         "UMAP2":9.8637200042,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A18_MM_A1_C03",
@@ -31412,8 +31081,7 @@
         "UMAP1":5.5068004479,
         "UMAP2":10.8186589654,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C06",
@@ -31489,8 +31157,7 @@
         "UMAP1":5.1296712813,
         "UMAP2":11.1482702642,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_JS_A1_C06",
@@ -31566,8 +31233,7 @@
         "UMAP1":5.1579034435,
         "UMAP2":8.2684409725,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C09",
@@ -31643,8 +31309,7 @@
         "UMAP1":5.5512878794,
         "UMAP2":9.3316828299,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A19_MM_A1_C10",
@@ -31720,8 +31385,7 @@
         "UMAP1":5.7930729817,
         "UMAP2":9.9718649916,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_SA_A3_C05",
@@ -31797,8 +31461,7 @@
         "UMAP1":5.5125441823,
         "UMAP2":10.9070362634,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_MM_A1_C05",
@@ -31874,8 +31537,7 @@
         "UMAP1":4.7554189998,
         "UMAP2":7.7416722761,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A21_SA_A1_C01",
@@ -31951,8 +31613,7 @@
         "UMAP1":3.4182064867,
         "UMAP2":7.269236899,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A22_JS_A1_C01",
@@ -32028,8 +31689,7 @@
         "UMAP1":5.4899746021,
         "UMAP2":9.8488106642,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A22_MM_A1_C04",
@@ -32105,8 +31765,7 @@
         "UMAP1":5.4258954099,
         "UMAP2":9.5703245202,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A22_SA_A1_C01",
@@ -32182,8 +31841,7 @@
         "UMAP1":5.8206421971,
         "UMAP2":9.4619801811,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A23_MM_A1_C05",
@@ -32259,8 +31917,7 @@
         "UMAP1":5.9046549134,
         "UMAP2":9.7430401383,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_JS_A1_C03",
@@ -32336,8 +31993,7 @@
         "UMAP1":1.732511454,
         "UMAP2":5.1141956674,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_JS_A1_C04",
@@ -32413,8 +32069,7 @@
         "UMAP1":5.107696532,
         "UMAP2":7.3228444237,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_JS_A1_C05",
@@ -32490,8 +32145,7 @@
         "UMAP1":6.0030085057,
         "UMAP2":9.9240510884,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_JS_A3_C03",
@@ -32567,8 +32221,7 @@
         "UMAP1":5.2764996113,
         "UMAP2":10.9002862452,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_JS_A5_C05",
@@ -32644,8 +32297,7 @@
         "UMAP1":5.1071367056,
         "UMAP2":11.4358395274,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A12_JS_B1_C07",
@@ -32721,8 +32373,7 @@
         "UMAP1":3.7918175786,
         "UMAP2":10.7152016991,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A34_SO_A3_C04",
@@ -32798,8 +32449,7 @@
         "UMAP1":4.5591636334,
         "UMAP2":7.9290051309,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_JR_A1_C06_Goettingen_NPI_Cell06",
@@ -32875,8 +32525,7 @@
         "UMAP1":3.6568840262,
         "UMAP2":7.4263026102,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -32952,8 +32601,7 @@
         "UMAP1":3.3389606708,
         "UMAP2":11.4370658638,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -33029,8 +32677,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M07_JR_A1_C08_Goettingen_NPI_Cell08",
@@ -33106,8 +32753,7 @@
         "UMAP1":1.6833896425,
         "UMAP2":6.464016285,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A27_MM_A1_C02",
@@ -33183,8 +32829,7 @@
         "UMAP1":5.1476705005,
         "UMAP2":7.2416909691,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A27_MM_A1_C03",
@@ -33260,8 +32905,7 @@
         "UMAP1":5.8139918826,
         "UMAP2":9.2202273323,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_EM_A1_C03",
@@ -33337,8 +32981,7 @@
         "UMAP1":3.1179657166,
         "UMAP2":7.6437711359,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A28_MM_A1_C05",
@@ -33414,8 +33057,7 @@
         "UMAP1":5.5119617249,
         "UMAP2":9.9387029604,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A29_MM_A1_C01",
@@ -33491,8 +33133,7 @@
         "UMAP1":4.167904983,
         "UMAP2":9.1023808971,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A1_C01",
@@ -33568,8 +33209,7 @@
         "UMAP1":5.4519243144,
         "UMAP2":10.9221166474,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A1_C02",
@@ -33645,8 +33285,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A32_MM_A2_C04",
@@ -33722,8 +33361,7 @@
         "UMAP1":4.7787348774,
         "UMAP2":7.3206953609,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_MM_A5_C06",
@@ -33799,8 +33437,7 @@
         "UMAP1":5.4858951111,
         "UMAP2":10.8430793738,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -33876,8 +33513,7 @@
         "UMAP1":5.2956777723,
         "UMAP2":8.8929308416,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A35_SO_A1_C04",
@@ -33953,8 +33589,7 @@
         "UMAP1":3.2971230214,
         "UMAP2":7.1505491008,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_AN_A1_C01_Goettingen_HEKA_Cell01",
@@ -34030,8 +33665,7 @@
         "UMAP1":4.7300697745,
         "UMAP2":6.6178360952,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -34107,8 +33741,7 @@
         "UMAP1":4.875875917,
         "UMAP2":6.6659453803,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M03_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -34184,8 +33817,7 @@
         "UMAP1":3.7049139729,
         "UMAP2":8.246504183,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_FP_A1_C05_Goettingen_NPI_Cell05",
@@ -34261,8 +33893,7 @@
         "UMAP1":5.1559536109,
         "UMAP2":9.8497749957,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_JR_A1_C01_Goettingen_NPI_Cell01",
@@ -34338,8 +33969,7 @@
         "UMAP1":4.9916704903,
         "UMAP2":7.0253620811,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_JR_A1_C04_Goettingen_NPI_Cell04",
@@ -34415,8 +34045,7 @@
         "UMAP1":2.5035818652,
         "UMAP2":8.4800544113,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M05_JR_A1_C07_Goettingen_NPI_Cell07",
@@ -34492,8 +34121,7 @@
         "UMAP1":5.1102451775,
         "UMAP2":7.1253397263,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C06_Goettingen_NPI_Cell06",
@@ -34569,8 +34197,7 @@
         "UMAP1":1.494973178,
         "UMAP2":8.848104409,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_JR_A1_C08_Goettingen_NPI_Cell08",
@@ -34646,8 +34273,7 @@
         "UMAP1":1.6670912589,
         "UMAP2":5.8758759859,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -34723,8 +34349,7 @@
         "UMAP1":3.6807566927,
         "UMAP2":7.6003255798,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M06_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -34800,8 +34425,7 @@
         "UMAP1":5.1958274502,
         "UMAP2":7.1822843209,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M27_SP_A1_C08_Goettingen_HEKA_Cell08",
@@ -34877,8 +34501,7 @@
         "UMAP1":5.5317640415,
         "UMAP2":10.0341353634,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_VK_A1_C04_Goettingen_NPI_Cell04",
@@ -34954,8 +34577,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_VK_A1_C02_Goettingen_NPI_Cell02",
@@ -35031,8 +34653,7 @@
         "UMAP1":5.6248940006,
         "UMAP2":9.1298925056,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M26_VK_A1_C01_Goettingen_NPI_Cell01",
@@ -35108,8 +34729,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_SA_A1_C04",
@@ -35185,8 +34805,7 @@
         "UMAP1":5.5830641896,
         "UMAP2":9.869829962,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A24_SA_A1_C06",
@@ -35262,8 +34881,7 @@
         "UMAP1":3.4835073348,
         "UMAP2":7.2322830775,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"A25_MM_A1_C01",
@@ -35339,8 +34957,7 @@
         "UMAP1":2.7847784358,
         "UMAP2":6.415347326,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_SP_A1_C03_Goettingen_HEKA_Cell03",
@@ -35416,8 +35033,7 @@
         "UMAP1":0.0985401241,
         "UMAP2":12.8561434661,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_JR_A1_C02_Goettingen_NPI_Cell02",
@@ -35493,8 +35109,7 @@
         "UMAP1":2.6025702272,
         "UMAP2":8.2716056684,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_MM_A1_C03",
@@ -35570,8 +35185,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_MM_A1_C04",
@@ -35647,8 +35261,7 @@
         "UMAP1":3.8728098916,
         "UMAP2":7.536452451,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M16_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -35724,8 +35337,159 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
+    },
+    {
+        "internalID":"M17_JS_A1_C05",
+        "Resting potential":-63.67,
+        "Resistance":474.2,
+        "RinSS":406.8,
+        "Time Constant":124.3199997,
+        "Rheobase":10,
+        "sagVrest":-63.01,
+        "sag":6.59,
+        "sagRat":1.16,
+        "sagAmp":-110.0,
+        "hump":null,
+        "humpRat":null,
+        "humpAmp":null,
+        "HypRectDelay":null,
+        "DepRectDelay":null,
+        "HypRectInsta":null,
+        "DepRectInsta":null,
+        "AP halfwidth":0.62,
+        "peakLP":29.3,
+        "thresLP":-47.91,
+        "fTrghLP":-57.46,
+        "sTrghLP":-60.91,
+        "peakUpStrkLP":340.13,
+        "peakDwStrkLP":-134.48,
+        "peakStrkRatLP":-2.53,
+        "htTP_LP":77.21,
+        "lat":39.02000046,
+        "CurrentStepSP":null,
+        "thresholdSP":null,
+        "fastTroughSP":null,
+        "slowTroughSP":null,
+        "Amplitude":null,
+        "peakUpStrokeSP":null,
+        "peakDownStrokeSP":null,
+        "peakStrokeRatioSP":null,
+        "latencySP":null,
+        "widthTP_SP":null,
+        "peakSP":null,
+        "rheoRt":6,
+        "lastQuisc":0.899999976,
+        "Median instantanous frequency":39.09000015,
+        "DFR_P90":54.31999969,
+        "DFR_P10":20.64999962,
+        "DFR_IQR":17.95000076,
+        "AdaRatB1B2":0.8,
+        "AdaRatB1BLast":0.6,
+        "fIslope":0.25,
+        "Max Firing Rate":36,
+        "cvISI":0.120999999,
+        "HeroRt":30,
+        "HeroAmp":70,
+        "heroLat":8.699999809,
+        "peakAda":-0.004318152,
+        "AdaIdx":0.004328799,
+        "burst":0.494000018,
+        "TrghDiff":-5.249023555,
+        "TrghRatio":0.619460944,
+        "Temperature":29.8,
+        "iRa":11.7,
+        "BB":null,
+        "PyrID":0.0,
+        "cellID":2224007,
+        "Dendrite type":"Aspiny",
+        "Cortical layer":"3",
+        "ReporterTag":null,
+        "Cortical area":"PFC",
+        "Weight":null,
+        "Sex":"M",
+        "Age":"P3.44Y",
+        "Species":"Callithrix jacchus",
+        "UMAP1":4.6158202393,
+        "UMAP2":8.8630658615,
+        "hasPlot":true,
+        "hasMorph":false
+    },
+    {
+        "internalID":"M17_JS_A1_C08",
+        "Resting potential":-58.31,
+        "Resistance":781.5,
+        "RinSS":779.7,
+        "Time Constant":128.6999969,
+        "Rheobase":30,
+        "sagVrest":-57.58,
+        "sag":1.23,
+        "sagRat":1.08,
+        "sagAmp":-30.0,
+        "hump":null,
+        "humpRat":null,
+        "humpAmp":null,
+        "HypRectDelay":0.42,
+        "DepRectDelay":0.24,
+        "HypRectInsta":0.52,
+        "DepRectInsta":0.52,
+        "AP halfwidth":0.92,
+        "peakLP":31.01,
+        "thresLP":-37.41,
+        "fTrghLP":-52.52,
+        "sTrghLP":-58.14,
+        "peakUpStrkLP":244.4,
+        "peakDwStrkLP":-66.62,
+        "peakStrkRatLP":-3.67,
+        "htTP_LP":68.42,
+        "lat":54.04000092,
+        "CurrentStepSP":null,
+        "thresholdSP":null,
+        "fastTroughSP":null,
+        "slowTroughSP":null,
+        "Amplitude":null,
+        "peakUpStrokeSP":null,
+        "peakDownStrokeSP":null,
+        "peakStrokeRatioSP":null,
+        "latencySP":null,
+        "widthTP_SP":null,
+        "peakSP":null,
+        "rheoRt":1,
+        "lastQuisc":19.54000092,
+        "Median instantanous frequency":22.48999977,
+        "DFR_P90":34.83000183,
+        "DFR_P10":18.23999977,
+        "DFR_IQR":4.989999771,
+        "AdaRatB1B2":0.5,
+        "AdaRatB1BLast":0.04,
+        "fIslope":0.07,
+        "Max Firing Rate":24,
+        "cvISI":0.174,
+        "HeroRt":14,
+        "HeroAmp":270,
+        "heroLat":4.46,
+        "peakAda":-0.017595911,
+        "AdaIdx":0.016413761,
+        "burst":0.47925,
+        "TrghDiff":2.685546935,
+        "TrghRatio":1.385301923,
+        "Temperature":30.2,
+        "iRa":8.4,
+        "BB":null,
+        "PyrID":1.0,
+        "cellID":9545510,
+        "Dendrite type":"Spiny",
+        "Cortical layer":"3",
+        "ReporterTag":null,
+        "Cortical area":"PFC",
+        "Weight":null,
+        "Sex":"M",
+        "Age":"P3.44Y",
+        "Species":"Callithrix jacchus",
+        "UMAP1":5.8135871151,
+        "UMAP2":9.6864725678,
+        "hasPlot":true,
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C09",
@@ -35801,8 +35565,7 @@
         "UMAP1":5.9845351883,
         "UMAP2":9.6113229979,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C11",
@@ -35878,8 +35641,7 @@
         "UMAP1":5.9548391779,
         "UMAP2":9.6335260214,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_JS_A1_C16",
@@ -35955,8 +35717,7 @@
         "UMAP1":1.0764203087,
         "UMAP2":8.7644850952,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C06",
@@ -36032,8 +35793,7 @@
         "UMAP1":4.0818324549,
         "UMAP2":7.4601940766,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M17_MM_A1_C11",
@@ -36109,8 +35869,7 @@
         "UMAP1":5.2660033554,
         "UMAP2":7.5045751064,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M08_JR_A1_C07_Goettingen_NPI_Cell07",
@@ -36186,8 +35945,7 @@
         "UMAP1":5.0607919788,
         "UMAP2":10.1551986941,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M18_JR_A1_C03_Goettingen_NPI_Cell03",
@@ -36263,8 +36021,7 @@
         "UMAP1":3.1792910804,
         "UMAP2":8.2192492999,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M19_JR_A1_C09_Goettingen_NPI_Cell09",
@@ -36340,8 +36097,7 @@
         "UMAP1":4.7874403213,
         "UMAP2":7.3377599057,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C01_Goettingen_HEKA_Cell01",
@@ -36417,8 +36173,7 @@
         "UMAP1":3.8738648109,
         "UMAP2":7.6440996726,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M20_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -36494,8 +36249,7 @@
         "UMAP1":4.7609919019,
         "UMAP2":6.7968571093,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M21_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -36571,8 +36325,7 @@
         "UMAP1":4.0230726837,
         "UMAP2":8.5108213732,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_SP_A1_C02_Goettingen_HEKA_Cell02",
@@ -36648,8 +36401,7 @@
         "UMAP1":null,
         "UMAP2":null,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M23_SP_A1_C07_Goettingen_HEKA_Cell07",
@@ -36725,8 +36477,7 @@
         "UMAP1":4.2582607811,
         "UMAP2":7.9261713353,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M24_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -36802,8 +36553,7 @@
         "UMAP1":3.3610778643,
         "UMAP2":7.6609838672,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M25_SP_A1_C04_Goettingen_HEKA_Cell04",
@@ -36879,8 +36629,7 @@
         "UMAP1":5.6830255821,
         "UMAP2":9.4912286729,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     },
     {
         "internalID":"M28_FP_A1_C02_Goettingen_HEKA_Cell02",
@@ -36956,7 +36705,6 @@
         "UMAP1":5.8043877751,
         "UMAP2":9.4201768559,
         "hasPlot":true,
-        "hasMorph":false,
-        "flagged":false
+        "hasMorph":false
     }
 ]
