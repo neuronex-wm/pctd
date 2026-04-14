@@ -8,7 +8,7 @@ import os
 import matplotlib.pyplot as plt
 import ngauge
 from ngauge import Neuron
-swc_dir = r"C:\Users\SMest\Downloads\NXWM NC Paper - Morpho\NXWM NC Paper - Morpho"
+swc_dir = r"C:\Users\SMest\Documents\NXWM NC Paper - Morpho\NXWM NC Paper - Morpho\\"
 out_dir = r"data\morph"
 
 def main():
@@ -16,8 +16,11 @@ def main():
     for swc_file in swc_files:
         print(f"Loading SWC file: {swc_file}")
         morph = Neuron().from_swc(swc_file)
+        morph.fix_parents()
         # Plot 
+
         fig = morph.plot(fig=None, ax=None, color="k" )
+        
 
         # Format and save
         ax = fig.get_axes()[0]
