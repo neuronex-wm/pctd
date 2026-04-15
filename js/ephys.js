@@ -108,7 +108,7 @@ function morphFormatter(value, row) {
     if (value) {
 
         
-        return '<a href="http://primatedatabase.com/data/morph/' + row.internalID + '.swc" class="btn btn-secondary" style="margin: 5px">Download Morph</a>';
+        return '<a href="http://primatedatabase.com/data/morph/' + row.internalID + '.swc" class="btn btn-secondary btn-sm" style="margin: 5px">Download Morph</a>';
     }
     else { return; }
 }
