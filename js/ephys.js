@@ -107,8 +107,8 @@ function linkFormatter(value, row) {
 function morphFormatter(value, row) {
     if (value) {
 
-        var morphID = value.split("=")
-        return '<a href="http://primatedatabase.com' + value + '" class="btn btn-primary" style="margin: 5px">View Cell</a> <a href="http://primatedatabase.com/swc/' + morphID[1] + '" class="btn btn-secondary" style="margin: 5px">Download Morph</a> ';
+        
+        return '<a href="http://primatedatabase.com/data/morph/' + row.internalID + '.swc" class="btn btn-secondary" style="margin: 5px">Download Morph</a>';
     }
     else { return; }
 }
