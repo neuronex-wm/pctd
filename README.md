@@ -1,6 +1,6 @@
 # Primate Cell Types Dataset (PCTD) Website
 
-This repository contains the source for a static website that presents the Primate Cell Types Dataset (PCTD), an open, public neuroscience resource. The site is designed to let users explore multimodal data (transcriptomic, electrophysiological, and morphological) from primate cortical neurons through interactive tables, plots, and downloadable files.
+This repository contains the source for a static website that presents the Primate Cell Types Dataset (PCTD), an open, public neuroscience resource. The site is designed to let users explore multimodal data (electrophysiological, and morphological) from primate cortical neurons through interactive tables, plots, and downloadable files.
 
 ## Repository Structure
 
