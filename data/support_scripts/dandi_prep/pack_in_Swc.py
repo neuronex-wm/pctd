@@ -1,6 +1,8 @@
 # Here we will attemp to load pack the SWC files into the nwbs, but this is not a priority
 
 import glob
+import sys
+from pathlib import Path
 import pandas
 import pynwb
 import os
@@ -8,12 +10,16 @@ from pynwb import NWBHDF5IO
 from hdmf.common import DynamicTable, VectorData
 import shutil
 
-NWB_DIR = r"C:\Users\SMest\source\pctd\data\updated_nwbs"
-NWB_OUT_DIR = r"C:\Users\SMest\source\pctd\data\nwbs_with_morph"
+# Import centralized config
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from pipeline_config import UPDATED_NWBS, NWBS_WITH_MORPH, BOX2_CSV, SWC_DIR as _SWC_DIR
 
-CSV_FILE = r"C:\Users\SMest\source\pctd\data\box2_ephys.csv"
+NWB_DIR = str(UPDATED_NWBS)
+NWB_OUT_DIR = str(NWBS_WITH_MORPH)
 
-SWC_DIR = r"C:\Users\SMest\Downloads\NXWM NC Paper - Morpho\NXWM NC Paper - Morpho"
+CSV_FILE = str(BOX2_CSV)
+
+SWC_DIR = str(_SWC_DIR)
 
 ORGIN_IDS = True
 

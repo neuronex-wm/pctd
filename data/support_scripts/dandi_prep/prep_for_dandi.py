@@ -2,6 +2,8 @@
 # Here we will pull the NWBs (ID'd by internal name), and rename them according to the cellID mapping in the provided CSV, and copy them to the new directory for upload to DANDI.
 import argparse
 import glob
+import sys
+from pathlib import Path
 
 import pandas
 import os
@@ -11,10 +13,14 @@ import pynwb
 from pynwb.icephys import IntracellularElectrode, Device
 print(pynwb.__version__)
 
-data_folders = [r"G:\Data4Website" ]
+# Import centralized config
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from pipeline_config import BOX2_CSV, UPDATED_NWBS, RAW_NWB_DIR
 
-id_lookup_csv = r"C:\Users\SMest\source\pctd\data\box2_ephys.csv"
-new_nwb_dir = r"C:\Users\SMest\source\pctd\data\updated_nwbs"
+data_folders = [str(RAW_NWB_DIR)] if str(RAW_NWB_DIR) else []
+
+id_lookup_csv = str(BOX2_CSV)
+new_nwb_dir = str(UPDATED_NWBS)
 
 
 def pynwb_check(nwb_file):

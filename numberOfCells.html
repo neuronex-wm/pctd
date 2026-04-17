@@ -9,10 +9,11 @@
 	<b><p id="length" style="display:inline"></p></b>
 	
 	<script>	
-		document.getElementById("length").innerHTML=350
-	/*jQuery.get("../data/data.json").done(function(data){
-	document.getElementById("length").innerHTML=Object.keys(data).length;
-	});*/
+	jQuery.get("data/box2_ephys.json").done(function(data){
+		document.getElementById("length").innerHTML=data.length;
+	}).fail(function(){
+		document.getElementById("length").innerHTML=350;
+	});
 	</script>
 	
 </body>

@@ -50,116 +50,161 @@ If you build new visualizations, prefer reading from the existing JSON/CSV files
 
 ## Updating the Data
 
-All data-processing scripts live in `data/support_scripts/`. The pipeline flows roughly as:
+All data-processing scripts live in `data/support_scripts/`. The pipeline is managed by a single orchestrator script with centralized configuration — no hardcoded paths to edit.
 
 ```
-source CSV ─► _2026_conv.py ─► box2_ephys.csv / .json
-                                    │
-               ┌────────────────────┼───────────────────┐
-               ▼                    ▼                    ▼
-       id_Lookup.py /        gen_swc_loading.py    prep_for_dandi.py
-       _pull_goe.py          (SWC → PNG)           (NWB validation)
-       (trace renaming)            │                    │
-               │                   ▼                    ▼
-               ▼              data/morph/         match_dandi_names.py
-         data/traces/                              ─► dandi_mapping.csv
+source CSV ─► convert_dataset.py ─► box2_ephys.csv / .json
+                                         │
+               ┌─────────────────────────┼───────────────────┐
+               ▼                         ▼                    ▼
+        pull_traces.py          render_morphology.py    dandi_prep/
+        (copy/rename)            (SWC → PNG)           prep_for_dandi.py
+               │                        │                    │
+               ▼                        ▼                    ▼
+         data/traces/             data/morph/         match_dandi_names.py
+                                                      ─► dandi_mapping.csv
 ```
 
-> **Important:** Most scripts contain hardcoded local paths near the top of the file. Update these to match your environment before running.
+### Quick Start: Adding New Cells (Append Mode)
+
+The most common task — adding new cells without regenerating the whole database:
+
+```bash
+cd data/support_scripts
+
+# Append from a CSV (format is auto-detected)
+python run_pipeline.py append path/to/new_cells.csv
+```
+
+That's it. The script will:
+1. Auto-detect whether your CSV is in raw format (source column names like `RinHD`, `widTP_LP`) or pre-formatted (display names like `Resistance`, `AP halfwidth`)
+2. Transform columns if needed
+3. Merge into the existing `box2_ephys.csv` / `.json`, overwriting any duplicate `cellID` entries
+4. Create a backup (`box2_ephys.csv.bak`) before writing
+5. Print a summary of cells added/updated
+
+**Accepted input formats:**
+- **Raw format** — same as the source dataset (e.g. `marmData_wUMAP.csv`): must have columns like `Row`, `Identifier`, `RinHD`, `widTP_LP`, etc.
+- **Pre-formatted** — already in website schema: must have columns like `internalID`, `cellID`, `Resistance`, `AP halfwidth`, etc.
+
+### Full Rebuild
+
+For a complete regeneration from a master dataset:
+
+```bash
+cd data/support_scripts
+
+# Option A: set environment variable
+set PCTD_SOURCE_CSV=C:\path\to\full_dataset.csv     # Windows
+export PCTD_SOURCE_CSV=/path/to/full_dataset.csv     # Linux/Mac
+
+python run_pipeline.py convert
+
+# Option B: pass directly
+python convert_dataset.py --source C:\path\to\full_dataset.csv
+```
 
 ### Script Quick-Reference
 
 | Script | Purpose | Key Input | Key Output |
 |--------|---------|-----------|------------|
-| `_2026_conv.py` | Convert a new dataset to the website format | Source dataset CSV | `data/box2_ephys.csv`, `data/box2_ephys.json` |
-| `bucket_pull.py` | Download trace CSVs from the S3 bucket | S3 bucket URL (hardcoded) | `downloaded_files/` |
-| `id_Lookup.py` | Rename trace files from internal IDs to cell IDs | `box2_ephys.csv` + trace CSVs | Renamed files in `data/traces/` |
-| `_pull_goe.py` | Copy & rename GOE dataset traces | `box2_ephys.csv` + GOE traces folder | Renamed files in `data/traces/` |
-| `gen_swc_loading.py` | Render SWC morphology files as PNGs | Local SWC directory | Full-size + 48×48 thumbnails in `data/morph/` |
-| `dandi_prep/prep_for_dandi.py` | Validate, repair, and organise NWBs | Source NWB folder + `box2_ephys.csv` | `data/updated_nwbs/{subject}/` |
-| `dandi_prep/match_dandi_names.py` | Link local NWBs to DANDI archive paths | `data/updated_nwbs/` + `001776/` | `data/dandi_mapping.csv` |
-| `dandi_prep/pack_in_Swc.py` | Embed SWC data into NWB files (experimental) | NWBs + SWC files | `data/nwbs_with_morph/` |
+| `run_pipeline.py` | Orchestrator — run any step by name | Step name + args | Delegates to other scripts |
+| `convert_dataset.py` | Convert source CSV or append new cells | Source/append CSV | `data/box2_ephys.csv`, `.json` |
+| `pull_traces.py` | Copy and rename local trace files | `--source-dir` | `data/traces/` |
+| `render_morphology.py` | Render SWC files as PNGs | `--swc-dir` or `PCTD_SWC_DIR` | `data/morph/` |
+| `pipeline_config.py` | Centralized paths & column mappings | (configuration module) | — |
+| `id_utils.py` | Shared ID mapping & file helpers | (utility module) | — |
+| `dandi_prep/prep_for_dandi.py` | Validate, repair, and organise NWBs | `--data-folders` + CSV | `data/updated_nwbs/` |
+| `dandi_prep/match_dandi_names.py` | Link NWBs to DANDI archive paths | `updated_nwbs/` + `001776/` | `data/dandi_mapping.csv` |
+| `dandi_prep/pack_in_Swc.py` | Embed SWC into NWBs (experimental) | NWBs + SWCs | `data/nwbs_with_morph/` |
+
+### Environment Variables (Optional)
+
+All paths auto-resolve relative to the repo. Override with environment variables only if your layout differs:
+
+| Variable | Purpose | Default |
+|----------|---------|---------|
+| `PCTD_SOURCE_CSV` | Full source dataset for regeneration | *(none — required for full convert)* |
+| `PCTD_SWC_DIR` | Directory of `.swc` files | *(none — required for morph step)* |
+| `PCTD_RAW_NWB_DIR` | Raw NWB source folder | *(none — required for DANDI prep)* |
+| `PCTD_BOX2_CSV` | Override `data/box2_ephys.csv` location | `<repo>/data/box2_ephys.csv` |
+| `PCTD_TRACES_DIR` | Override traces directory | `<repo>/data/traces` |
+| `PCTD_MORPH_DIR` | Override morphology directory | `<repo>/data/morph` |
 
 ### Python Dependencies
 
 ```
-pip install pandas numpy h5py pynwb hdmf ngauge matplotlib httpx
+pip install pandas numpy h5py pynwb hdmf ngauge matplotlib
 ```
 
-Not every script needs all packages — `_2026_conv.py` only requires `pandas`, `numpy`, and `json`, for example — but the list above covers the full pipeline.
+Not every script needs all packages — `convert_dataset.py` only requires `pandas` and `numpy` — but the list above covers the full pipeline.
 
-### 1. Adding or Updating Cells (`_2026_conv.py`)
+### Pipeline Steps in Detail
 
-This is the main ingestion script. It reads a source dataset CSV, renames columns to match the website schema, computes availability flags, and writes the two files the website consumes.
+#### 1. Adding or Updating Cells (`convert_dataset.py`)
 
-**Steps:**
+**Append mode** (most common — adds to existing DB):
+```bash
+python convert_dataset.py --append path/to/new_cells.csv
+```
+- Input format is auto-detected (raw or pre-formatted)
+- Duplicates by `cellID` are overwritten with the new data
+- `hasPlot` / `hasMorph` flags are recomputed for new rows
+- A `.bak` backup is created before modifying the database
 
-1. Open `_2026_conv.py` and update the input CSV path at the top of the file (currently points to a local `marmData_wUMAP.csv`).
-2. Review the `OTHER_MAPPINGS` dictionary — it maps source column names to the website's expected names (e.g. `RinHD` → `Resistance`, `widTP_LP` → `AP halfwidth`). Add or modify entries if the new dataset uses different column names.
-3. The script auto-detects whether trace/morphology files exist by scanning `data/traces/` and `data/morph/`. The boolean columns `hasPlot` and `hasMorph` are set accordingly, so make sure trace and morphology files are in place *before* running this script (or re-run it afterward).
-4. Dendritic types are mapped as: `A` → Aspiny, `S` → Spiny, anything else → Unknown.
-5. Rows are sorted by Amplitude (descending), then `hasPlot`, then `hasMorph` so the most complete cells appear first in the table.
-6. Run the script. It writes `data/box2_ephys.csv` and `data/box2_ephys.json`.
+**Full mode** (regenerate everything from scratch):
+```bash
+python convert_dataset.py --source path/to/full_dataset.csv
+```
+- Reads the complete source dataset
+- Applies column renaming (`RinHD` → `Resistance`, etc.)
+- Maps dendrite types: `A` → Aspiny, `S` → Spiny
+- Sorts by Amplitude, hasPlot, hasMorph (descending)
+- Overwrites `data/box2_ephys.csv` and `data/box2_ephys.json`
 
-If you need to flag specific cells for removal, add their IDs to the `flag_cells` list near the top of the script.
+Column mappings are defined in `pipeline_config.py` → `COLUMN_MAPPINGS` dict. This is the single source of truth that must stay in sync with `js/ephysConfig.js`.
 
-After updating the data, check whether any new features were added. If so, add corresponding entries in `js/ephysConfig.js` (see the [Electrophysiology Feature Configuration](#electrophysiology-feature-configuration-jsephysconfigjs) section below).
-
-### 2. Updating Traces
-
-Trace files are CSV files stored in `data/traces/`, named by cell ID (e.g. `CJ001.csv`).
-
-**Downloading from S3:**
-`bucket_pull.py` downloads all trace CSVs from the project's S3 bucket (`ptcd-traces.s3.us-east-2.amazonaws.com`). Files are saved to a local `downloaded_files/` directory.
-
-**Renaming files to cell IDs:**
-Source trace files are typically named by internal recording ID. Two scripts handle renaming:
-
-- `id_Lookup.py` — general-purpose: reads the `internalID` → `cellID` mapping from `box2_ephys.csv`, copies each trace CSV in `data/traces/` to a new file named `{cellID}.csv`.
-- `_pull_goe.py` — same logic, but pulls from a separate GOE traces folder and copies into `data/traces/`.
-
-Both scripts require `box2_ephys.csv` to exist first (produced by `_2026_conv.py`).
-
-### 3. Updating Morphology Previews (`gen_swc_loading.py`)
-
-This script converts SWC reconstruction files into PNG images used by the website.
-
-1. Update `swc_dir` at the top of the file to point to your local folder of `.swc` files.
-2. Run the script. For each SWC file it produces:
-   - A full-size image at 300 dpi: `data/morph/{name}_morph.png`
-   - A 48×48 thumbnail: `data/morph/{name}_morph_thumb.png`
-3. After generating images, re-run `_2026_conv.py` so the `hasMorph` flags are updated.
-
-Requires the `ngauge` and `matplotlib` packages.
-
-### 4. Preparing NWBs for DANDI Upload
-
-These scripts live in `data/support_scripts/dandi_prep/`.
-
-**Step 1 — Validate and organise (`prep_for_dandi.py`):**
+#### 2. Updating Traces (`pull_traces.py`)
 
 ```bash
-python prep_for_dandi.py --data-folders /path/to/raw/nwbs --id-lookup-csv ../../box2_ephys.csv --new-nwb-dir ../../updated_nwbs
+# Copy traces from a local directory, renaming by internalID
+python pull_traces.py --source-dir /path/to/traces/
 ```
 
-- Copies NWB files into `data/updated_nwbs/{subject}/`, renaming by cell ID.
-- Attempts to read each file with `pynwb`. If reading fails (common with MatLab-exported NWBs), it applies a repair pass using `h5py`: adds a dummy intracellular electrode, links it to acquisition/stimulus datasets, and ensures subject weight metadata exists.
-- Use `--retain-original-id` to keep the internal ID in the filename alongside the cell ID.
+Source files may be named by `cellID` (numeric) or `internalID` (string). Files named by `cellID` are automatically renamed to the corresponding `internalID`. Trace files are stored in `data/traces/` (e.g. `A19_MM_A1_C08.csv`).
 
-**Step 2 — Match to DANDI archive (`match_dandi_names.py`):**
+#### 3. Updating Morphology Previews (`render_morphology.py`)
 
-This script links local NWBs in `data/updated_nwbs/` to the corresponding files in the DANDI archive directory (`001776/`). It uses a two-tier matching strategy:
+```bash
+python render_morphology.py --swc-dir /path/to/swc/files/
+# or: set PCTD_SWC_DIR=... then just run:
+python render_morphology.py
+```
 
-1. **Tier 1 (file size):** If a source NWB has a unique file size among the candidate DANDI files, it matches immediately.
-2. **Tier 2 (timestamp):** For ambiguous sizes, it reads `session_start_time` from the source NWB (via `h5py`) and matches against the timestamp encoded in the DANDI filename (`ses-YYYYMMDDTHHMMSS`).
+For each SWC file it produces:
+- Full-size image at 300 dpi: `data/morph/{name}_morph.png`
+- 48×48 thumbnail: `data/morph/{name}_morph_thumb.png`
 
-Output: `data/dandi_mapping.csv` with columns `cellID`, `updated_nwbs_path`, `dandi_path`, `dandi_filename`, and `match_method`.
+After generating images, re-run `convert_dataset.py --append` or `convert` so the `hasMorph` flags update.
 
-The `001776/` directory (DANDI dataset structure) must be present locally for this script to work.
+#### 4. Preparing NWBs for DANDI Upload
 
-**Step 3 (experimental) — Embed morphology (`pack_in_Swc.py`):**
+```bash
+# Step 1: Validate and organise NWBs
+python dandi_prep/prep_for_dandi.py --data-folders /path/to/raw/nwbs
 
-Reads SWC files and writes them as `DynamicTable` entries inside a `morphology` processing module in each NWB. Output goes to `data/nwbs_with_morph/`. This step is optional and still under development.
+# Step 2: Match to DANDI archive
+python dandi_prep/match_dandi_names.py
+
+# Step 3 (optional): Embed morphology
+python dandi_prep/pack_in_Swc.py
+```
+
+See docstrings in each script for details. All paths now import from `pipeline_config.py`.
+
+### Legacy Scripts
+
+Old scripts are preserved in `data/support_scripts/_archive/` for reference. They are superseded by the new pipeline but kept for historical context.
 
 
 ## Electrophysiology Feature Configuration (`js/ephysConfig.js`)
