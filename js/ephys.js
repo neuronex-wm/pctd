@@ -102,13 +102,13 @@ function reportFormatter(value, row) {
     return '<a class="fa fa-exclamation-circle" onclick="on(\'' + row.ID + '\')"></a>';
 }
 function linkFormatter(value, row) {
-    return '<button class="btn btn-primary btn-sm" onclick="downloadFromDandi(' + row.cellID + ')">Download (NWB)</button>';
+    // Downloads temporarily disabled
+    return '<button class="btn btn-primary btn-sm" disabled title="Downloads temporarily unavailable">Download (NWB)</button>';
 }
 function morphFormatter(value, row) {
     if (value) {
-
-        
-        return '<a href="http://primatedatabase.com/data/morph/' + row.internalID + '.swc" class="btn btn-secondary btn-sm" style="margin: 5px">Download Morph</a>';
+        // Downloads temporarily disabled
+        return '<button class="btn btn-secondary btn-sm" style="margin: 5px" disabled title="Downloads temporarily unavailable">Download Morph</button>';
     }
     else { return; }
 }
@@ -289,21 +289,8 @@ function filterByID(ids) {
 }
 // Download a single NWB file from DANDI Archive
 function downloadFromDandi(cellID) {
-    if (!dandiMapping || !dandiAssetMap) {
-        alert('Download data is still loading. Please try again shortly.');
-        return;
-    }
-    var dandiPath = dandiMapping[String(cellID)];
-    if (!dandiPath) {
-        alert('Download not available for this cell.');
-        return;
-    }
-    var assetId = dandiAssetMap[dandiPath];
-    if (!assetId) {
-        alert('Asset not found on DANDI for this cell.');
-        return;
-    }
-    window.location.href = 'https://api.dandiarchive.org/api/assets/' + encodeURIComponent(assetId) + '/download/';
+    alert('Downloads are temporarily unavailable. Please check back later.');
+    return;
 }
 
 
