@@ -489,7 +489,7 @@ h5, .h5 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 .cell-actions .cell-action-btn {
