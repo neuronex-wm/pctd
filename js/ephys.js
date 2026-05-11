@@ -101,17 +101,29 @@ function doesFileExist(urlToFile) {
 function reportFormatter(value, row) {
     return '<a class="fa fa-exclamation-circle" onclick="on(\'' + row.ID + '\')"></a>';
 }
-function linkFormatter(value, row) {
-    // Downloads temporarily disabled
-    return '<button class="btn btn-primary btn-sm" disabled title="Downloads temporarily unavailable">Download (NWB)</button>';
-}
-function morphFormatter(value, row) {
-    if (value) {
-        // Downloads temporarily disabled
-        return '<button class="btn btn-secondary btn-sm" style="margin: 5px" disabled title="Downloads temporarily unavailable">Download Morph</button>';
+function actionsFormatter(value, row) {
+    // Downloads temporarily disabled — combined NWB + Morph action cell.
+    var parts = ['<div class="cell-actions">'];
+    parts.push(
+        '<button class="btn btn-primary btn-sm cell-action-btn" disabled ' +
+        'title="Downloads temporarily unavailable">' +
+        '<i class="bi bi-download"></i><span class="btn-label"> NWB</span>' +
+        '</button>'
+    );
+    if (row && row.hasMorph) {
+        parts.push(
+            '<button class="btn btn-secondary btn-sm cell-action-btn" disabled ' +
+            'title="Downloads temporarily unavailable">' +
+            '<i class="bi bi-diagram-3"></i><span class="btn-label"> Morph</span>' +
+            '</button>'
+        );
     }
-    else { return; }
+    parts.push('</div>');
+    return parts.join('');
 }
+// Legacy aliases — kept so any cached HTML/external refs keep working.
+function linkFormatter(value, row) { return actionsFormatter(value, row); }
+function morphFormatter(value, row) { return ''; }
 
 function detailFormatter(index, row) {
     var html = []

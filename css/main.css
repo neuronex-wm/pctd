@@ -483,6 +483,40 @@ h5, .h5 {
   }
 }
 
+/* Combined Downloads action column — keep buttons from being clipped
+   on sub-1080p viewports by letting them wrap and collapsing to icons. */
+.cell-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cell-actions .cell-action-btn {
+  white-space: nowrap;
+}
+.table th.actions-col,
+.table td:has(> .cell-actions) {
+  width: 1%;
+  white-space: nowrap;
+}
+@media (max-width: 1199px) {
+  .table th.actions-col,
+  .table td:has(> .cell-actions) {
+    max-width: 140px;
+  }
+}
+@media (max-width: 1025px) {
+  /* Collapse to icon-only buttons to save horizontal space. */
+  .cell-actions .btn-label {
+    display: none;
+  }
+  .cell-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 /* Very small screens - show only essential columns */
 @media (max-width: 767px) {
   .table th,
