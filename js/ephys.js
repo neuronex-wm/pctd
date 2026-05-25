@@ -102,20 +102,22 @@ function reportFormatter(value, row) {
     return '<a class="fa fa-exclamation-circle" onclick="on(\'' + row.ID + '\')"></a>';
 }
 function actionsFormatter(value, row) {
-    // Downloads temporarily disabled — combined NWB + Morph action cell.
+    // Combined NWB + Morph action cell.
     var parts = ['<div class="cell-actions">'];
     parts.push(
-        '<button class="btn btn-primary btn-sm cell-action-btn" disabled ' +
-        'title="Downloads temporarily unavailable">' +
+        '<button class="btn btn-primary btn-sm cell-action-btn" ' +
+        'onclick="downloadFromDandi(' + row.cellID + ')" ' +
+        'title="Download NWB file from DANDI">' +
         '<i class="bi bi-download"></i><span class="btn-label"> NWB</span>' +
         '</button>'
     );
     if (row && row.hasMorph) {
         parts.push(
-            '<button class="btn btn-secondary btn-sm cell-action-btn" disabled ' +
-            'title="Downloads temporarily unavailable">' +
+            '<a href="https://primatedatabase.com/data/morph/' + row.internalID + '.swc" ' +
+            'class="btn btn-secondary btn-sm cell-action-btn" ' +
+            'title="Download morphology (.swc)">' +
             '<i class="bi bi-diagram-3"></i><span class="btn-label"> Morph</span>' +
-            '</button>'
+            '</a>'
         );
     }
     parts.push('</div>');
@@ -127,7 +129,7 @@ function morphFormatter(value, row) { return ''; }
 
 function detailFormatter(index, row) {
     var html = []
-    var url = "./data/traces/" + row.internalID + ".csv"
+    var url = "./data/traces_pruned/" + row.internalID + ".csv"
     var plot_bool = doesFileExist(url)
     var morph_url = "./data/morph/" + row.internalID + "_morph.png"
     var morph_bool = doesFileExist(morph_url)
@@ -301,14 +303,27 @@ function filterByID(ids) {
 }
 // Download a single NWB file from DANDI Archive
 function downloadFromDandi(cellID) {
-    alert('Downloads are temporarily unavailable. Please check back later.');
-    return;
+    if (!dandiMapping || !dandiAssetMap) {
+        alert('Download data is still loading. Please try again shortly.');
+        return;
+    }
+    var dandiPath = dandiMapping[String(cellID)];
+    if (!dandiPath) {
+        alert('Download not available for this cell.');
+        return;
+    }
+    var assetId = dandiAssetMap[dandiPath];
+    if (!assetId) {
+        alert('Asset not found on DANDI for this cell.');
+        return;
+    }
+    window.location.href = 'https://api.dandiarchive.org/api/assets/' + encodeURIComponent(assetId) + '/download/';
 }
 
 
 //function to generate plots
 function maketrace(row) {
-    var url = "./data/traces/" + row.internalID + ".csv"
+    var url = "./data/traces_pruned/" + row.internalID + ".csv"
     Plotly.d3.csv(url, function (rows) {
         data = []
         var i = 1
