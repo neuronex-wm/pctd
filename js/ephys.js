@@ -224,12 +224,12 @@ function off() {
 // cross filter function for parallel plot
 function unpack(rows, key) {
                         return rows.map(function (row) {
-                            return row[key];
+                            return row[key] ? parseFloat(row[key]) : means[key] || null;
                         });
                     }
 function logunpack(rows, key) {
     return rows.map(function (row) {
-        return Math.log10(row[key]);
+        return row[key] ? Math.log10(row[key]) : means[key] ? Math.log10(means[key]) : null;
     });
 }
 function catunpack(rows, key) {
