@@ -929,9 +929,9 @@ border-top: 1px solid #fff;
 .waveform-card {
     background: white;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.75rem;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -940,19 +940,19 @@ border-top: 1px solid #fff;
 .info-card {
     background: white;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.75rem;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .waveform-plot {
     width: 100%;
     flex: 1;
-    min-height: 400px;
+    min-height: 340px;
 }
 
 .detail-container .row {
-    min-height: 450px;
+    min-height: 380px;
 }
 
 .detail-container .col-lg-8 {
@@ -964,8 +964,8 @@ border-top: 1px solid #fff;
     color: #495057;
     font-weight: 600;
     font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.5rem;
     border-bottom: 2px solid #667eea;
     display: flex;
     align-items: center;
@@ -979,7 +979,7 @@ border-top: 1px solid #fff;
 
 .info-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
 }
 
@@ -990,7 +990,7 @@ border-top: 1px solid #fff;
 .info-item {
     display: flex;
     flex-direction: column;
-    padding: 0.4rem 0.6rem;
+    padding: 0.35rem 0.5rem;
     background: #f8f9fa;
     border-radius: 4px;
     border-left: 3px solid #667eea;
@@ -1006,7 +1006,7 @@ border-top: 1px solid #fff;
 }
 
 .info-value {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #212529;
     font-weight: 500;
 }
@@ -1071,7 +1071,15 @@ border-top: 1px solid #fff;
 
 /* ========== RESPONSIVE ADJUSTMENTS ========== */
 
+@media (min-width: 992px) {
+    .detail-container {
+        max-height: calc(100vh - 140px);
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 991px) {
+    .info-grid,
     .info-grid.two-col {
         grid-template-columns: 1fr;
     }

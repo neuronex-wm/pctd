@@ -168,7 +168,7 @@ function detailFormatter(index, row) {
     if (morph_bool) {
         html.push('<div class="info-card">');
         html.push('<h6 class="section-title"><i class="bi bi-diagram-3"></i> Morphology</h6>');
-        html.push('<div style="text-align:center;"><img src="' + morph_url + '" class="img-fluid" alt="Morphology reconstruction" style="max-height:250px;"></div>');
+        html.push('<div style="text-align:center;"><img src="' + morph_url + '" class="img-fluid" alt="Morphology reconstruction" style="max-height:170px;"></div>');
         html.push('</div>');
     }
     
