@@ -113,7 +113,7 @@ function actionsFormatter(value, row) {
     );
     if (row && row.hasMorph) {
         parts.push(
-            '<a href="https://primatedatabase.com/data/morph/' + row.internalID + '.swc" ' +
+            '<a href="https://primatedatabase.com/data/morph/' + row.cellID + '.swc" ' +
             'class="btn btn-secondary btn-sm cell-action-btn" ' +
             'title="Download morphology (.swc)">' +
             '<i class="bi bi-diagram-3"></i><span class="btn-label"> Morph</span>' +
@@ -131,7 +131,7 @@ function detailFormatter(index, row) {
     var html = []
     var url = "./data/traces_pruned/" + row.internalID + ".csv"
     var plot_bool = doesFileExist(url)
-    var morph_url = "./data/morph/" + row.internalID + "_morph.png"
+    var morph_url = "./data/morph/" + row.cellID + "_morph.png"
     var morph_bool = doesFileExist(morph_url)
 
     html.push('<div class="detail-container">');

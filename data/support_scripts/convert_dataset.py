@@ -46,11 +46,11 @@ def _compute_has_plot(df: pd.DataFrame) -> pd.Series:
 
 
 def _compute_has_morph(df: pd.DataFrame) -> pd.Series:
-    """Check which internalIDs have a morphology PNG in MORPH_DIR."""
+    """Check which cellIDs have a morphology PNG in MORPH_DIR."""
     if not MORPH_DIR.exists():
         return pd.Series(False, index=df.index)
     morph_ids = {stem(f).replace("_morph", "").replace("_thumb", "") for f in MORPH_DIR.glob("*.png")}
-    return df["internalID"].apply(lambda x: str(x) in morph_ids)
+    return df["cellID"].apply(lambda x: str(x) in morph_ids)
 
 
 def _sort_dataframe(df: pd.DataFrame) -> pd.DataFrame:
